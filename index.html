@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <title>Parrocchie Prevalle</title>
+        <link rel="icon" type="image/x-icon" href="/assets/logo/favicon.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+        <link href="/css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v13.0" nonce="Nwtwnz2y"></script>    
+       
+        <header>
+
+            <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+            <div class="header">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2196f3;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#home">Parrocchie Prevalle</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contacts">Contatti</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#hours">Orari Sante Messe</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#iban">Donazioni</a>
+                                </li>
+                                <!--<li class="nav-item">
+                                    <a class="nav-link disabled" href="https://www.parrocchieprevalle.it/prenotazione/" target="_blank">Oratorio S. Giovanni Bosco (prenotazioni campo calcetto a 5)</a>
+                                </li>-->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#maps">Dove siamo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.youtube.com/channel/UCX8YGfekGP-SUmpUsIu_YTw" target="_blank">Youtube</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.facebook.com/parrocchieprevalle" target="_blank">Facebook</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Home -->
+                <div class="home container-sm text-center mt-5 pt-2">
+                    <a name="home"></a>
+                    <img src="assets/logo/logoParrocchie.jpg" width="150px" alt="logoParrocchiePrevalle">
+                    <h1>Parrocchie di San Michele e San Zenone in Prevalle (BS)</h1>
+                    <div class="py-5">
+                        <a href="https://www.facebook.com/parrocchieprevalle" target="_blank"><img src="assets/logo/FBBlueCircle.png" alt="Facebook-logo" style="width: 55px"></a>
+                        <a href="https://www.youtube.com/channel/UCX8YGfekGP-SUmpUsIu_YTw" target="_blank"><img src="assets/logo/YTRed.png" alt="YouTube-logo" style="width: 50px"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner text-center">
+                <div class="photos container-fluid text-center pt-3">
+                    <figure>
+                        <img src="assets/img/sanMichele.jpg"class="img-fluid img-thumbnail" alt="SanMichele">
+                        <figcaption>Chiesa parrocchiale di San Michele</figcaption>
+                        <img src="assets/img/sanZenone.jpg"class="img-fluid img-thumbnail" alt="SanZenone">
+                        <figcaption>Chiesa parrocchiale di San Zenone</figcaption>
+                        <img src="assets/img/santuarioMadonnaDelCarrozzone.jpg"class="img-fluid img-thumbnail" alt="SantuarioMadonnaDelCarrozzone">
+                        <figcaption>Santuario della Madonna del Carrozzone</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </header>
+        <article>
+            <!-- Hours -->
+            <div class="hours top">
+                <div class="container-fluid text-center">
+                    <a name="hours"><h2>Orari Sante Messe</h2></a>
+                    <p>validi da Novembre ad Aprile</p>
+                    <table class="table table-bordered" id="tbHours">
+                        <thead>
+                            <tr>
+                                <th scope="col">Giorno</th>
+                                <th scope="col">Ora</th>
+                                <th scope="col">Chiesa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan=2>LUNEDì</td>
+                                <td>8:30</td>
+                                <td>San Michele</td>
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td>San Zenone</td>
+                            </tr>
+                            <tr>
+                                <td rowspan=2>MARTEDì</td>
+                                <td>8:30</td>
+                                <td>San Zenone</td>
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td>San Michele</td>
+                            </tr>
+                            <tr>
+                                <td rowspan=2>MERCOLEDì</td>
+                                <td>8:30</td>
+                                <td>San Michele</td>
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td>Chiesetta di S. Carlo (Fraz. Celle) fino al 15 novembre - dal 22 novembre al 3 aprile in parrocchia San Zenone</td>
+                            </tr>
+                            <tr>
+                                <td rowspan=2>GIOVEDì</td>
+                                <td>17:00</td>
+                                <td>San Zenone</td>
+                            </tr>
+                            <tr>
+                                <td>18:00</td>
+                                <td>San Michele</td>
+                            </tr>
+                            <tr>
+                                <td rowspan=2>VENERDì</td>
+                                <td>8:30</td>
+                                <td>San Michele</td>
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td>San Zenone</td>
+                            </tr>
+                            <tr>
+                                <td rowspan=3>SABATO</td>
+                                <td>8:30</td>
+                                <td>San Zenone</td>
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td>San Zenone</td>
+                            </tr>
+                            <tr>
+                                <td>18:30</td>
+                                <td>San Michele</td>
+                            </tr>
+                            <tr>
+                                <td rowspan=4>DOMENICA</td>
+                                <td>7:30</td>
+                                <td>San Michele</td>
+                            </tr>
+                            <tr>
+                                <td>9:00</td>
+                                <td>San Zenone</td>
+                            </tr>
+                            <tr>
+                                <td>10:30</td>
+                                <td>San Michele</td>
+                            </tr>
+                            <tr>
+                                <td>18:00</td>
+                                <td>San Zenone</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Contacts section-->
+            <div class="contacts bottom">
+                <div class="container-fluid text-center">
+                    <a name="contacts"><h2>Contatti</h2></a>
+                    <table class="table table-bordered table-striped border-dark" id="tbContacts">
+                        <tbody>
+                            <tr>
+                                <td>Segreteria Parrocchiale</td>
+                                <td>348 58 76 125</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2>
+                                    <table class="table table-bordered border-dark text-center" id="tbSecretaryship">
+                                        <thead>Orari di apertura della segreteria e disponibilità telefonica</thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Lunedì</td><td>9:00 - 11:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mercoledì</td><td>15:00 - 17:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Venerdì</td><td>9:00 - 11:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td colspan=2>Indirizzo email: <address><a href="mailto:segreteria@parrocchieprevalle.it" style="color: #2196f3">segreteria@parrocchieprevalle.it</a></address></td>
+                            </tr>
+                            <tr>
+                                <td>Don Fabrizio</td>
+                                <td>338 43 50 441</td>
+                            </tr>
+                            <tr>
+                                <td>Canonica</td>
+                                <td>030 60 36 35</td>
+                            </tr>
+                            <tr>
+                                <td>Don Francesco</td>
+                                <td>339 35 85 479</td>
+                            </tr>
+                            <tr>
+                                <td>Padre Carmine</td>
+                                <td>391 13 48 235</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>  
+            
+            <!-- bank coordinates-->
+            <div class="iban top">
+                <div class="container-sm text-center">
+                    <a name="iban"><h2>Offerte a sostegno delle attività parrocchiali</h2></a>
+                    <h3>Parrocchia di San Zenone</h3>
+                    <p>IBAN: IT 28 H 05387 55050 000 042 821 304</p>
+                    <h3>Parrocchia di San Michele</h3>
+                    <p>IBAN: IT 21 Z 08735 55050 060 000 701 289</p>
+                </div>
+            </div>
+            <!-- Reservation -->
+            <!-- <div class="oratorio ">
+                <div class="container-sm text-center">
+                    <h2>Oratorio San Giovanni Bosco</h2>
+                    <p>Verifica le disponibilità e prenota il campo di calcetto a 5!</p>
+                    <button type="button" class="btn btn-lg disabled" style="background-color: #2196f3;"><a href="https://www.parrocchieprevalle.it/prenotazione/" target="_blank">Prenotazioni</a></button>
+                </div>
+            </div> -->
+            
+            <!-- Stories 
+            <div class="stories">
+                <div class="sanZenone">
+                    <h1>Parrocchia di San Zenone</h1>
+                </div>
+                <div class="sanMichele">
+                    <h1>Parrocchia di San Michele</h1>
+                </div>
+                <div>
+                    <a href="https://comune.prevalle.bs.it/contenuti/48166/madonna-carrozzone#" target="_blank"><h1>Santuario della Madonna del Carrozzone</h1></a>
+                </div>
+            </div>-->
+
+            <!-- Facebook -->
+            <div class="fbPlugin text-center bottom">
+                <h2>Resta aggiornato! Metti Like alla nostra pagina Facebook!</h2>
+                <div class="fb-page" data-href="https://www.facebook.com/parrocchieprevalle" data-tabs="timeline" data-width="250" data-height="400" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/parrocchieprevalle" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/parrocchieprevalle">Parrocchie Prevalle</a></blockquote></div>
+            </div>
+
+            <!-- Maps -->
+            <div class="mapsPlugin text-center top">
+                <a name="maps"><h2>Dove siamo:</h2></a>
+                <p>Chiesa parrocchiale di San Michele: <a href="https://maps.app.goo.gl/3oJ5Mp6bkvoFZGhu9" target="_blank">via San Michele, 18</a></p>
+                <p>Chiesa parrocchiale di San Zenone: <a href="https://maps.app.goo.gl/eJiBSRudhfcF6sV78" target="_blank">largo Don Lodrini, 1</a></p>
+                <p>Oratorio S. Giovanni Bosco: <a href="https://maps.app.goo.gl/3DjAiYhvXdWUdY2YA" target="_blank">via Don Bonsignori, 70</a></p>
+                <p>Santuario Madonna del Carozzone: <a href="https://maps.app.goo.gl/4T1QQkCDpNGDmCxF7" target="_blank">via IV Novembre, 160</a></p>
+            
+                <div class="justify-content-center">
+                    <iframe class="text-center pt-3" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11176.768641800993!2d10.420367211410184!3d45.546459812638986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sprevalle%20parrocchie!5e0!3m2!1sit!2sit!4v1648989439564!5m2!1sit!2sit" width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="bottom"></div>
+
+        </article>
+        <footer>
+            <div style="background-color: #2196f3;">
+                <nav class="navbar">
+                    <div class="container-sm ">
+                        <div>
+                            <span >&copy 2022 | Web master: <a href="https://claudiacavalleri.netlify.app" target="_blank">Claudia Cavalleri</a></span>
+                        </div>
+                        <div>
+                            <a href="https://www.youtube.com/channel/UCX8YGfekGP-SUmpUsIu_YTw" target="_blank"><img src="assets/logo/YTRed.png" width="30px"></a>
+                            <a href="https://www.facebook.com/parrocchieprevalle" target="_blank"><img src="assets/logo/FBBlueCircle.png" width="30px"></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
+        <script src="/js/script.js"></script> 
+    </body>
+</html>
+
+
+
+<!--messe estive 
+la sera alle 20 invece che alle 17 dal mese di giugno fino a fine agosto
+lunedi sera alle 20 al cimitero san Zenone fino a fine agosto
+MARTEDì alle 20 cimitero s Michele
+mercoledi da pasqua da aprile a celle alle 17, da giugno alle 20
+giovedi 8:30 san zenone da giugno fino a fine agosto
+giovedi alle 20 al carozzone da giugno fino a fine ottobre
+venerdi alle 20 a san zenone fino a fine agosto-->
