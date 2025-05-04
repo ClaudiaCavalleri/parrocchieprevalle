@@ -4,44 +4,56 @@
   box-sizing: border-box;
 }
 
+/* MOBILE FIRST max-width: 640px */
+
 :root {
-  /* Font families con fallback */
-  --font-serif: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* Font families con fallback */
+    --font-serif: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  /* Pesi */
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
+    /* Pesi */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
 
-  /* Dimensioni base */
-  --font-size-xs: 0.50rem;
-  --font-size-sm: 0.75rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
+    /* Dimensioni base */
+    --font-size-xs: 0.50rem;
+    --font-size-sm: 0.75rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
 
-  /* Interlinea */
-  --line-height-base: 1.6;
-  --line-height-heading: 1.2;
+    /* Interlinea */
+    --line-height-base: 1.6;
+    --line-height-heading: 1.2;
 
-  //Colori
-  --azzurro: #a6d4fa;
-  --blu-notte: #14213d;
-  --bordeaux: #7d1e3f;
-  --viola: #5e4b8b;
-  --giallo: #f4c430;
+    /* Margini */
+    --margin-2xs: 28px;
+    --margin-xs: 36px;
+    --margin-sm: 40px;
+    --margin-md: 56px;
+    --margin-lg: 80px;
+    --margin-xl: 96px;
+    --margin-2xl: 112px;
+    --margin-3xl: 144px;
 
-  --azzurro2: #4ba3e2;
-  --blu-notte2: #0a2540;
-  --bordeaux2: #8c1c3a;
-  --viola2: #5a2a82;
-  --giallo2: #f2b705;
+    /* Colori */
+    --azzurro: #a6d4fa;
+    --blu-notte: #14213d;
+    --bordeaux: #7d1e3f;
+    --viola: #5e4b8b;
+    --giallo: #f4c430;
 
-  --dark:rgb(14, 14, 14);
-  --light:rgb(244, 248, 252);
-  --black: #000000;
-  --white: #ffffff;
+    --azzurro2: #4ba3e2;
+    --blu-notte2: #0a2540;
+    --bordeaux2: #8c1c3a;
+    --viola2: #5a2a82;
+    --giallo2: #f2b705;
+
+    --dark:rgb(14, 14, 14);
+    --light:rgb(244, 248, 252);
+    --black: #000000;
+    --white: #ffffff;
 }
 
 body {
@@ -97,6 +109,32 @@ a {
   color: white;
 }
 
+/* HTML Tags */
+.section {
+    margin-top: var(--margin-md);
+    margin-bottom: var(--margin-md);
+}
+
+.container {
+    background-color: var(--giallo2);
+    padding-inline: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+
+}
+
+.place-first {
+    order: 2;
+}
+
+.place-second {
+    order: 1;  //da sistemare
+}
+
 
 /* styles the "scroll to top" button */
 #scrollToTopBtn {
@@ -119,5 +157,63 @@ a {
   background-color: #4527a0;
 }
 
-@media only screen and (max-width: 699px) {
+
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+    .container {
+        padding-inline: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .section {
+        margin-top: var(--margin-lg);
+        margin-bottom: var(--margin-lg);
+    }
+
+    .container {
+        padding-inline: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+
+    .section {
+        margin-top: var(--margin-xl);
+        margin-bottom: var(--margin-xl);
+    }
+
+    .container {
+        padding-inline: 6rem;
+    }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+
+    .section {
+        margin-top: var(--margin-2xl);
+        margin-bottom: var(--margin-2xl);
+    }
+
+    .container {
+        padding-inline: 8rem;
+    }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+
+    .section {
+        margin-top: var(--margin-3xl);
+        margin-bottom: var(--margin-3xl);
+    }
+
+    .container {
+        padding-inline: 9rem;
+    }
+}
+
+@media only screen and (min-width: 1681px) {
+    .container {
+        padding-inline: 10rem;
+    }
 }

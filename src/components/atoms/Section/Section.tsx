@@ -1,8 +1,7 @@
-import type { FC } from 'react';
+import type { DOMAttributes, FC } from 'react';
 import type { ElementType } from 'react';
-import type { ComponentProps } from '@/@types/components';
 
-export interface SectionProps extends ComponentProps {
+export interface SectionProps extends DOMAttributes<HTMLOrSVGElement> {
     bgColor?: string;
     className?: string;
     overflowHidden?: boolean;
@@ -13,22 +12,15 @@ export interface SectionProps extends ComponentProps {
 const Section: FC<SectionProps> = ({
     bgColor,
     children,
-    className = '',
+    className = 'section',
     overflowHidden = true,
     spacer,
     tag: Tag = 'section',
     ...props
 }) => {
-    let spacerClass: string = 'u-spacer-lg';
-
-    if (typeof spacer === 'string') {
-        spacerClass = spacer;
-    }
-
     const componentClassName = [
         'relative',
         overflowHidden ? 'overflow-hidden' : '',
-        spacerClass,
         bgColor,
         className,
     ];
