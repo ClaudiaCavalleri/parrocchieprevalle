@@ -1,0 +1,105 @@
+import type { FC } from 'react';
+import type{ TextProps } from '../../atoms/Text/Text';
+import type { TitleProps } from '../../atoms/Title/Title';
+
+import Title from '../../atoms/Title/Title';
+import Text from '../../atoms/Text/Text';
+
+interface ContentProps {
+    columns?: 1 | 2;
+    // cta?: CTA[];
+    ctaClassName?: string;
+    // ctaSize?: ButtonSizes;
+    label?: string;
+    subtitle?: string;
+    subtitleProps?: TitleProps;
+    text?: string;
+    textProps?: TextProps;
+    title?: string;
+    titleProps?: TitleProps;
+}
+
+const Content: FC<ContentProps> = ({
+    // className = '',
+    columns = 1,
+    // cta = [],
+    ctaClassName = '',
+    // ctaSize = 'md',
+    subtitle = '',
+    subtitleProps,
+    text = '',
+    textProps,
+    title = '',
+    titleProps,
+}) => {
+    const hasTitle: boolean = typeof title === 'string' && title !== '';
+    const hasSubtitle: boolean = typeof subtitle === 'string' && subtitle !== '';
+    const hasText: boolean = typeof text === 'string' && text !== '';
+    // const hasCTA: boolean = Array.isArray(cta) && cta.length > 0;
+
+    const classNameComponent: string[] = [
+        'm-content',
+        'flex flex-col items-start',
+        columns === 2
+            ? 'xl:grid xl:grid-cols-2 xl:gap-x-20 xl:gap-y-0'
+            : '',
+        // className && className
+    ];
+
+    return (
+        <div className={classNameComponent.join(' ')}>
+            {
+                hasTitle && (
+                    <Title
+                        className="mt-6 first:mt-0 !text-red-300"
+                        isHTML={true}
+                        size="lg"
+                        tag="p"
+                        {...titleProps}
+                    >
+                        {title || titleProps?.title}
+                    </Title>
+                )
+            }
+
+            {
+                hasSubtitle && (
+                    <Title
+                        className="mt-6 first:mt-0"
+                        isHTML={true}
+                        size="md"
+                        tag="p"
+                        {...subtitleProps}
+                    >
+                        {subtitle || subtitleProps?.title}
+                    </Title>
+                )
+            }
+
+            {
+                hasText && (
+                    <Text
+                        className="mt-6 first:mt-0 text-left"
+                        {...textProps}
+                    >
+                        {text}
+                    </Text>
+                )
+            }
+
+            {/* {
+                hasCTA && (
+                    <div className="flex flex-row justify-between items-center u-spacer-lg first:mt-0">
+                        <BowButtonGroup
+                            className={ctaClassName}
+                            list={cta}
+                            size={ctaSize}
+                        />
+                    </div>
+                )
+            } */}
+        </div>
+    )
+}
+
+export default Content;
