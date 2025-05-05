@@ -37,6 +37,12 @@
     --margin-2xl: 112px;
     --margin-3xl: 144px;
 
+    /* Gap */
+    --gap-sm: 0.75rem;
+    --gap-md: 1.25rem;
+    --gap-lg: 2.25rem;
+    --gap-xl: 3rem;
+
     /* Colori */
     --azzurro: #a6d4fa;
     --blu-notte: #14213d;
@@ -124,15 +130,37 @@ a {
 
 .grid-container {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--gap-md);
+}
 
+.tabs-wrapper>.grid-container>column {
+    
+}
+
+picture {
+    display: block;
+    position: relative;
+    width: 600px;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+picture>img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 .place-first {
-    order: 2;
+    order: 1;
 }
 
 .place-second {
-    order: 1;  //da sistemare
+    order: 2;  //da sistemare
 }
 
 

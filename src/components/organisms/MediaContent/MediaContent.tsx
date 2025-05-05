@@ -43,11 +43,11 @@ const MediaContent: FC<MediaContentProps> = ({
     // );
 
     return (
-        <div className={componentClassName}>
+        <div className='grid-container'>
             <div
                 className={[
                     'relative',
-                    mediaPosition === 'left' ? 'place-first' : 'place-second',
+                    mediaPosition === 'left' ? 'place-second' : 'place-first',
                     'col-span-2'
                 ].join(' ')}
             >
@@ -64,9 +64,9 @@ const MediaContent: FC<MediaContentProps> = ({
             <Image
                 alt={alt}
                 pictureClassName={[
-                    'relative rounded-3xl overflow-hidden h-full min-h-72 md:min-h-80',
-                    'lg:min-h-96 [&_img]:absolute [&_img]:h-full [&_img]:object-cover',
-                    mediaPosition === 'left' ? 'place-second' : 'place-first'
+                    // 'relative rounded-3xl overflow-hidden h-full min-h-72 md:min-h-80',
+                    // 'lg:min-h-96 [&_img]:absolute [&_img]:h-full [&_img]:object-cover',
+                    mediaPosition === 'left' ? 'place-first' : 'place-second'
                 ].join(' ')}
                 src={imageUrl}
                 {...mediaProps}

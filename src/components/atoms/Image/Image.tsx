@@ -18,7 +18,7 @@ const Image: React.FC<ImageProps> = ({
     height = 'auto',
     fallbackSrc = '/fallback.jpg', // immagine di default
     className = '',
-    pictureClassName = 'relative',
+    pictureClassName = '',
 }) => {
     const [imgSrc, setImgSrc] = useState(src);
 
@@ -33,8 +33,8 @@ const Image: React.FC<ImageProps> = ({
             <img
                 src={imgSrc}
                 alt={alt}
-                width={width}
-                height={height}
+                // width={width}
+                // height={height}
                 onError={handleError}
                 className={className}
                 loading="lazy"

@@ -1,23 +1,26 @@
 import type { FC } from "react";
-import Container from "../../atoms/Container/Container";
-
-import Section from "../../atoms/Section/Section";
+import TabsItem, { TabsItemProps } from "../../molecules/TabsItem/TabsItem";
 
 interface Tabsprops {
-
-
+    list?: TabsItemProps[];
 }
 
 const Tabs: FC<Tabsprops> = ({
-
+    list = [],
 }) => {
 
     return (
-        <Section>
-            <Container>
-                TABS!!
-            </Container>
-        </Section>
+        <div className="tabs-wrapper">
+            {
+                list.map((item, index) => (
+                    <TabsItem 
+                        key={index}
+                        title={item.title}
+                        text={item.text}
+                    />
+                ))
+            }
+        </div>
     )
 }
 

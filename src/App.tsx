@@ -1,6 +1,6 @@
 import Content from "./components/molecules/Content/Content";
-import Tabs from "./components/organisms/Tabs/Tabs";
 import MediaContentSection from "./components/templates/MediaContentSection/MediaContentSection";
+import TabsSection from "./components/templates/TabsSection/TabsSection";
 
 export default function App() {
     return (<>
@@ -9,7 +9,7 @@ export default function App() {
                 subtitle="subtitle test"
                 text="text lorem ipsum"
         />
-        <Tabs />
+        <TabsSection />
         <MediaContentSection />
        </>
     );
