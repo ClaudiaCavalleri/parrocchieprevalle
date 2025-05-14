@@ -1,4 +1,3 @@
-// components/Image.tsx
 import React, { DOMAttributes, useState } from 'react';
 
 export interface ImageProps extends DOMAttributes<HTMLOrSVGElement> {

@@ -1,16 +1,14 @@
 import type { FC } from 'react';
-import type{ TextProps } from '../../atoms/Text/Text';
+import type { TextProps } from '../../atoms/Text/Text';
 import type { TitleProps } from '../../atoms/Title/Title';
 
 import Title from '../../atoms/Title/Title';
 import Text from '../../atoms/Text/Text';
 
-interface ContentProps {
-    columns?: 1 | 2;
+export interface ContentProps extends TitleProps {
     // cta?: CTA[];
     ctaClassName?: string;
     // ctaSize?: ButtonSizes;
-    label?: string;
     subtitle?: string;
     subtitleProps?: TitleProps;
     text?: string;
@@ -21,7 +19,6 @@ interface ContentProps {
 
 const Content: FC<ContentProps> = ({
     // className = '',
-    columns = 1,
     // cta = [],
     ctaClassName = '',
     // ctaSize = 'md',
@@ -37,17 +34,8 @@ const Content: FC<ContentProps> = ({
     const hasText: boolean = typeof text === 'string' && text !== '';
     // const hasCTA: boolean = Array.isArray(cta) && cta.length > 0;
 
-    const classNameComponent: string[] = [
-        'm-content',
-        'flex flex-col items-start',
-        columns === 2
-            ? 'xl:grid xl:grid-cols-2 xl:gap-x-20 xl:gap-y-0'
-            : '',
-        // className && className
-    ];
-
     return (
-        <div className={classNameComponent.join(' ')}>
+        <div className="content-wrapper">
             {
                 hasTitle && (
                     <Title

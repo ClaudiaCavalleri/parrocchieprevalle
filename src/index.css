@@ -56,6 +56,15 @@
     --viola2: #5a2a82;
     --giallo2: #f2b705;
 
+    --primary-light-plus: #a6d4fa;
+    --primary-light: #4D8DC1;
+    --primary: #3174AB;
+    --primary-medium: #005B93;
+    --primary-dark: #00426B;
+
+    --secondary-light: #FFECD1;
+    --secondary: #E6BC68;
+
     --dark:rgb(14, 14, 14);
     --light:rgb(244, 248, 252);
     --black: #000000;
@@ -115,6 +124,15 @@ a {
   color: white;
 }
 
+.bg-primary-dark {
+    background-color: var(--primary-dark);
+    color: var(--light);
+}
+.bg-secondary-light {
+    background-color: var(--secondary);
+    color: var(--primary-dark);
+}
+
 /* HTML Tags */
 .section {
     margin-top: var(--margin-md);
@@ -122,7 +140,6 @@ a {
 }
 
 .container {
-    background-color: var(--giallo2);
     padding-inline: 2rem;
     max-width: 1600px;
     margin: 0 auto;
@@ -134,25 +151,53 @@ a {
     gap: var(--gap-md);
 }
 
-.tabs-wrapper>.grid-container>column {
-    
+.content-media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--gap-md);
+    align: center;
+}
+
+.tabs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+}
+
+.tab-item {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--gap-md);
+    vertical-align: center;
+}
+
+.tab-item>div {
+    text-align: right;
+}
+
+.tab-item>column {
+    display: flex;
+    flex-direction: column;
 }
 
 picture {
     display: block;
     position: relative;
-    width: 600px;
+    width: 100%;
     aspect-ratio: 4/3;
     overflow: hidden;
     margin: 0 auto;
 }
 
 picture>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: block;
     object-fit: cover;
     object-position: center;
-    width: 100%;
-    height: 100%;
 }
 
 .place-first {
@@ -161,6 +206,34 @@ picture>img {
 
 .place-second {
     order: 2;  //da sistemare
+}
+
+.content-media-grid .content {
+    grid-column: span 2;
+}
+
+.content-media-grid .media {
+  grid-column: span 1;
+}
+
+.content-media-grid .place-first.content {
+    order: 1;
+    grid-column-start: 1;
+}
+
+.content-media-grid .place-second.content {
+    order: 2;
+    grid-column-start: 2;
+}
+
+.content-media-grid .place-first.media {
+    order: 1;
+    grid-column-start: 1;
+}
+
+.content-media-grid .place-second.media {
+    order: 2;
+    grid-column-start: 3;
 }
 
 

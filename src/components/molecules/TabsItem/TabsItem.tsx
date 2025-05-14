@@ -35,17 +35,8 @@ const TabsItem: FC<TabsItemProps> = ({
     const hasTitle: boolean = typeof title === 'string' && title !== '';
     const hasText: boolean = Array.isArray(text) && text.length > 0;
 
-    const classNameComponent: string[] = [
-        'grid-container',
-        'flex flex-col items-start',
-        columns === 2
-            ? 'xl:grid xl:grid-cols-2 xl:gap-x-20 xl:gap-y-0'
-            : '',
-        // className && className
-    ];
-
     return (
-        <div className={classNameComponent.join(' ')}>
+        <tr className="tab-item">
             {
                 hasTitle && (
                     <Title
@@ -60,22 +51,20 @@ const TabsItem: FC<TabsItemProps> = ({
                 )
             }
 
-
-            {
-                hasText && (
+            <td className='column'>
+                {hasText && (
                     text.map((item, index) =>(
-                        <div className='column' key={index}>
-                            <Text
-                                className="mt-6 first:mt-0 text-left"
-                                {...textProps}
-                            >
-                                {item}
-                            </Text>
-                        </div>
+                        <Text
+                            key={index}
+                            className="mt-6 first:mt-0 text-left"
+                            {...textProps}
+                        >
+                            {item}
+                        </Text>
                     ))
-                )
-            }
-        </div>
+                )}
+            </td>
+        </tr>
     )
 }
 
