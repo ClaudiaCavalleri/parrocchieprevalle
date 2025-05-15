@@ -4,7 +4,9 @@ import Footer from "./components/templates/Footer/Footer";
 import Header from "./components/templates/Header/Header";
 import MediaContentSection from "./components/templates/MediaContentSection/MediaContentSection";
 import TabsSection from "./components/templates/TabsSection/TabsSection";
+import { madonnaDelCarrozzone } from "./data/carrozzone";
 import { messeData } from "./data/orariMesse";
+import { storieParrocchie } from "./data/storiaParrocchie";
 
 export default function App() {
     return (<>
@@ -43,8 +45,8 @@ export default function App() {
         <MediaContentSection 
             mediaContent={{
                 content: {
-                    title: 'Soria delle parrocchie di Prevalle',
-                    text: 'Lorem Ipsum dolor sit amet',
+                    title: storieParrocchie.title,
+                    text: storieParrocchie.text,
                 },
                 mediaPosition: 'left',
                 imageUrl: 'https://picsum.photos/600/400?random'
@@ -54,11 +56,14 @@ export default function App() {
         <MediaContentSection 
             mediaContent={{
                 content: {
-                    title: 'Santuario della madonna del Carrozzone',
-                    text: 'Lorem Ipsum dolor sit amet',
+                    title: madonnaDelCarrozzone.content?.title,
+                    text: madonnaDelCarrozzone.content?.text,
                 },
                 mediaPosition: 'right',
-                imageUrl: 'https://picsum.photos/600/400?random'
+                mediaProps: {
+                    alt: madonnaDelCarrozzone.alt,
+                    src: madonnaDelCarrozzone.imageUrl,
+                }
             }}
         />
         <BannerSection 

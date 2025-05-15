@@ -154,8 +154,8 @@ a {
 .content-media-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--gap-md);
-    align: center;
+    gap: var(--gap-lg);
+    align-items: stretch;
 }
 
 .tabs-wrapper {
@@ -213,17 +213,19 @@ picture>img {
 }
 
 .content-media-grid .media {
-  grid-column: span 1;
+    grid-column: span 1;
 }
 
 .content-media-grid .place-first.content {
     order: 1;
     grid-column-start: 1;
+    grid-column: span 2;
 }
 
 .content-media-grid .place-second.content {
     order: 2;
     grid-column-start: 2;
+    grid-column: span 2;
 }
 
 .content-media-grid .place-first.media {
@@ -262,6 +264,10 @@ picture>img {
 @media only screen and (min-width: 641px) and (max-width: 768px) {
     .container {
         padding-inline: 2.5rem;
+    }
+    .content-media-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: var(--gap-md);
     }
 }
 

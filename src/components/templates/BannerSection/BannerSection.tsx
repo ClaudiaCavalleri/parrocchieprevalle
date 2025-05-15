@@ -3,6 +3,7 @@ import Container from "../../atoms/Container/Container";
 
 import Section from "../../atoms/Section/Section";
 import Content, { ContentProps } from "../../molecules/Content/Content";
+import { codiciIabn } from "../../../data/codiciIban";
 
 interface BannerSectionProps {
     titleContent?: Omit<ContentProps, 'columns'|'ctaClassName'|'label'>
@@ -19,14 +20,14 @@ const BannerSection: FC<BannerSectionProps> = ({
                     <Content {...titleContent}/>
                     <div className="grid-container">
                         <Content 
-                            title="test 1"
-                            subtitle="subtitle 1"
-                            text="IT33X 89348239873367837299018000000001"
+                            title={codiciIabn[0].title}
+                            subtitle=""
+                            text={codiciIabn[0].text[0]}
                         />
                         <Content 
-                            title="test 2"
-                            subtitle="subtitle 2"
-                            text="IT33X 89348239873367837299018000000001"
+                            title={codiciIabn[1].title}
+                            subtitle=""
+                            text={codiciIabn[1].text[0]}
                         />
                     </div>
                 </div>

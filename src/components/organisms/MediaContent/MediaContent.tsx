@@ -23,14 +23,6 @@ const MediaContent: FC<MediaContentProps> = ({
     mediaProps,
     content,
 }) => {
-    // const hasTitle: boolean = typeof title === 'string' && title !== '';
-    // const hasText: boolean = typeof text === 'string' && text !== '';
-    // const hasSubtitle: boolean = typeof subtitle === 'string' && subtitle !== '';
-    // const hasCTA: boolean = Array.isArray(cta) && cta.length > 0;
-    // const hasMedia: boolean = (
-    //     (typeof media === 'object' && typeof media.url !== 'undefined')
-    //     //(typeof urlMedia === 'string' && urlMedia !== '')
-    // );
 
     return (
         <div className='content-media-grid'>

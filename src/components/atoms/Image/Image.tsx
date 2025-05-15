@@ -15,7 +15,7 @@ const Image: React.FC<ImageProps> = ({
     alt,
     width = 'auto',
     height = 'auto',
-    fallbackSrc = '/fallback.jpg', // immagine di default
+    fallbackSrc = 'https://picsum.photos/600/400?random', // immagine di default
     className = '',
     pictureClassName = '',
 }) => {
