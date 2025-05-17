@@ -40,9 +40,8 @@ const Content: FC<ContentProps> = ({
                 hasTitle && (
                     <Title
                         className="mt-6 first:mt-0 !text-red-300"
-                        isHTML={true}
                         size="lg"
-                        tag="p"
+                        tag='h2'
                         {...titleProps}
                     >
                         {title || titleProps?.title}
@@ -54,9 +53,8 @@ const Content: FC<ContentProps> = ({
                 hasSubtitle && (
                     <Title
                         className="mt-6 first:mt-0"
-                        isHTML={true}
                         size="md"
-                        tag="p"
+                        tag='h3'
                         {...subtitleProps}
                     >
                         {subtitle || subtitleProps?.title}

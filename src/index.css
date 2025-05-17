@@ -22,6 +22,7 @@
     --font-size-lg: 1.25rem;
     --font-size-xl: 1.5rem;
     --font-size-2xl: 2rem;
+    --font-size-3xl: 3rem;
 
     /* Interlinea */
     --line-height-base: 1.6;
@@ -84,29 +85,29 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
-    margin: 1.5em 0 0.5em;
 }
 
 h1 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
 }
 
 h2 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
 }
 
 h3 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
 }
 
 h4,
 h5,
 h6 {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
 }
 
 p {
-  margin-bottom: 1em;
+    font-size: var(--font-size-base);
+    margin-bottom: 1em;
 }
 
 strong,
@@ -133,16 +134,25 @@ a {
     color: var(--primary-dark);
 }
 
+.text-white {
+    color: var(--light)
+}
+
 /* HTML Tags */
 .section {
     margin-top: var(--margin-md);
     margin-bottom: var(--margin-md);
+    overflow: hidden;
 }
 
 .container {
     padding-inline: 2rem;
     max-width: 1600px;
     margin: 0 auto;
+}
+
+.relative {
+    position: relative;
 }
 
 .grid-container {
@@ -236,6 +246,59 @@ picture>img {
 .content-media-grid .place-second.media {
     order: 2;
     grid-column-start: 3;
+}
+
+/* CONTENT WRAPPER */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+}
+
+
+/* COVER - BANNER */
+.cover-picture {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.cover-image {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;  
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 15;
+}
+
+.img-overlay-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 

@@ -13,14 +13,12 @@ const Section: FC<SectionProps> = ({
     bgColor,
     children,
     className = 'section',
-    overflowHidden = true,
     spacer,
     tag: Tag = 'section',
     ...props
 }) => {
     const componentClassName = [
         'relative',
-        overflowHidden ? 'overflow-hidden' : '',
         bgColor,
         className,
     ];

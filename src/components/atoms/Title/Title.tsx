@@ -5,9 +5,6 @@ export type TitleSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl'
 export interface TitleProps extends HTMLAttributes<HTMLOrSVGElement> {
     align?: 'text-left' | 'text-center' | 'text-right' | 'text-justify';
     className?: string;
-    titleColor?: string;
-    isHTML?: boolean;
-    isAltFont?: boolean;
     size?: TitleSize;
     tag?: React.ElementType;
     weight?: 'font-regular' | 'font-medium' | 'font-bold';
@@ -18,8 +15,6 @@ const Title: FC<TitleProps> = ({
     align = 'text-left',
     className = 'text-red-300',
     children,
-    titleColor = '',
-    isHTML = false,
     size = 'lg',
     tag: Tag = 'h1',
     weight = 'font-regular',
@@ -31,7 +26,6 @@ const Title: FC<TitleProps> = ({
         'a-title',
         align,
         className,
-        titleColor,
         weight,
         uppercaseClass,
     ];
@@ -79,23 +73,13 @@ const Title: FC<TitleProps> = ({
 
     componentClassName.push(sizeClass);
 
-    let textComponent = <Tag>{children}</Tag>;
-
-    if (isHTML) {
-        const htmlContent: { __html: string | TrustedHTML } = {
-            __html: children as string
-        };
-
-        textComponent = <div dangerouslySetInnerHTML={htmlContent} />
-    }
-
     return (
-        <div
+        <Tag
             className={componentClassName.join(' ').trim()}
             {...props}
         >
-            {textComponent}
-        </div>
+            {children}
+        </Tag>
     );
 };
 
