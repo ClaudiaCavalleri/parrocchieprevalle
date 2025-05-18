@@ -39,7 +39,9 @@
     --margin-3xl: 144px;
 
     /* Spessore bordi */
-    --border-width: 1px;
+    --border-width-xs: 1px;
+    --border-width-sm: 1.5px;
+    --border-width-md: 2px;
 
     --radius-sm: 10px;
     --radius-md: 20px;
@@ -148,11 +150,11 @@ a {
 }
 
 .border-white {
-    border: var(--border-width) solid var(--light);
+    border: var(--border-width-sm) solid var(--light);
 }
 
 .border-primary {
-    border: var(--border-width) solid var(--primary-light);
+    border: var(--border-width-sm) solid var(--primary);
 }
 
 .text-center {
@@ -168,13 +170,14 @@ a {
     margin-top: var(--margin-md);
     margin-bottom: var(--margin-md);
     overflow: hidden;
+    border-bottom-right-radius: var(--radius-lg);
 }
 
 .container {
     padding-inline: 2rem;
-    padding-block: 3rem;
     max-width: 1600px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .relative {
@@ -299,6 +302,11 @@ picture>img {
     height: auto;
 }
 
+.cover-section {
+    overflow: hidden;
+    border-bottom-right-radius: var(--radius-lg);
+}
+
 .cover-section .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -309,6 +317,7 @@ picture>img {
     display: flex;
     flex-direction: column;
     gap: var(--gap-lg);
+    padding-block: 4rem;
 }
 
 .cover-picture {

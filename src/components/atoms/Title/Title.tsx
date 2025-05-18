@@ -3,7 +3,6 @@ import React, { FC, HTMLAttributes } from 'react';
 export type TitleSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
 
 export interface TitleProps extends HTMLAttributes<HTMLOrSVGElement> {
-    align?: 'text-left' | 'text-center' | 'text-right' | 'text-justify';
     className?: string;
     size?: TitleSize;
     tag?: React.ElementType;
@@ -12,7 +11,6 @@ export interface TitleProps extends HTMLAttributes<HTMLOrSVGElement> {
 }
 
 const Title: FC<TitleProps> = ({
-    align = 'text-left',
     className = 'text-red-300',
     children,
     size = 'lg',
@@ -23,8 +21,6 @@ const Title: FC<TitleProps> = ({
 }) => {
     const uppercaseClass = uppercase ? 'uppercase' : '';
     const componentClassName = [
-        'a-title',
-        align,
         className,
         weight,
         uppercaseClass,

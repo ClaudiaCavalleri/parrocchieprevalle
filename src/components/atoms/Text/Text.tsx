@@ -1,7 +1,6 @@
 import type { FC, HtmlHTMLAttributes } from "react";
 
 export interface TextProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
-    align?: 'text-left' | 'text-center' | 'text-right' | 'text-justify';
     children?: React.ReactNode;
     className?: string;
     color?: string;
@@ -9,7 +8,6 @@ export interface TextProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
 }
 
 const Text: FC<TextProps> = ({
-    align = 'text-left',
     children,
     className,
     color,
@@ -17,7 +15,6 @@ const Text: FC<TextProps> = ({
     ...props
 }) => {
     const componentClassName = [
-        align ? align : "",
         className ? className : "",
         color ? color : "",
         size ? size : ""
@@ -30,9 +27,10 @@ const Text: FC<TextProps> = ({
     return (
         <div
             className={componentClassName}
-            dangerouslySetInnerHTML={htmlContent}
             {...props}
-        />
+        >
+            {children}
+        </div>
     )
 }
 

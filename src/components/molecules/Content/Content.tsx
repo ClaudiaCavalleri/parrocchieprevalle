@@ -47,7 +47,7 @@ const Content: FC<ContentProps> = ({
             {
                 hasTitle && (
                     <Title
-                        className="mt-6 first:mt-0 !text-red-300"
+                        className="mt-6 first:mt-0"
                         size="lg"
                         tag='h2'
                         {...titleProps}
@@ -73,7 +73,7 @@ const Content: FC<ContentProps> = ({
             {
                 hasText && (
                     <Text
-                        className="mt-6 first:mt-0 text-left"
+                        className="mt-6 first:mt-0"
                         {...textProps}
                     >
                         {text}

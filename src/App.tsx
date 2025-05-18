@@ -1,4 +1,5 @@
 
+import Map from "./components/atoms/Map/Map";
 import CoverSection from "./components/templates/CoverSection/CoverSection";
 import Footer from "./components/templates/Footer/Footer";
 import Header from "./components/templates/Header/Header";
@@ -67,8 +68,8 @@ export default function App() {
             }}
             contentList={codiciIban}
             mediaProps={{
-                alt: 'alt',
-                src: 'https://picsum.photos/600/400?random',
+                alt: '',
+                src: '',
             }}
         />
 
@@ -100,6 +101,7 @@ export default function App() {
             titleContent={{
                 title: "Bollettino parrochiale La Via",
                 subtitle: "Abbonati",
+                align: "text-center"
             }}
             mediaProps={{
                 alt: '',
@@ -135,13 +137,17 @@ export default function App() {
         <MediaContentSection 
             mediaContent={{
                 content: {
-                    title: 'Contentmap',
-                    text: 'DA implementare componente con mappa a destra e rounded',
+                    title: 'Dove ci troviamo',
+                    subtitle: '',
+                    text: '',
                 },
                 mediaPosition: 'right',
                 mediaProps: {
                     alt: '',
-                    src: 'https://picsum.photos/600/400?random',
+                    src: '',
+                },
+                mapProps: {
+                    src: 'https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4256.628010469242!2d10.415030141616315!3d45.54842884779589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPrevalle%20Parrocchia%20San%20Michele%2C%20Prevalle%20Parrocchia%20San%20Zenone!5e1!3m2!1sit!2sit!4v1747603559630!5m2!1sit!2sit'
                 }
             }}
         />
