@@ -1,42 +1,36 @@
-export interface MessaItem {
-    title: string;
-    text: string[];
-}
+import type { ContentProps } from "../components/molecules/Content/Content";
 
-export const tabHeadMesse: MessaItem =
+export const messeData: ContentProps[] = [
     {
-        title: 'Giorno della settimana',
-        text: ['Ora e luogo'],
-    }
-
-export const messeData: MessaItem[] = [
-    {
-        title: 'Sabato',
-        text: ['8:30 — San Zenone', '17:00 — San Zenone', '18:30 - San Michele'],
+        title: 'Orari s.messe',
+        text: 'Lorem ipsum dolor',
     },
     {
-        title: 'Domenica',
-        text: ['7:30 — San Michele', '9:00 — San Zenone', '10:30 - San Michele', '18:00 - San Michele'],
-    },
-    
-    {
-        title: 'Lunedì',
-        text: ['8:30 — San Michele', '17:00 — San Zenone'],
+        subtitle: 'Sabato',
+        text: '8:30 — San Zenone 17:00 — San Zenone 18:30 - San Michele',
     },
     {
-        title: 'Martedì',
-        text: ['8:30 — San Zenone', '17:00 — San Michele'],
+        subtitle: 'Domenica',
+        text: '7:30 — San Michele9:00 — San Zenone10:30 - San Michele18:00 - San Michele',
     },
     {
-        title: 'Mercoledì',
-        text: ['8:30 — San Michele', '17:00 — San Zenone'],
+        subtitle: 'Lunedì',
+        text: '8:30 — San Michele17:00 — San Zenone',
     },
     {
-        title: 'Giovedì',
-        text: ['17:00 — San Zenone', '18:00 — San Michele'],
+        subtitle: 'Martedì',
+        text: '8:30 — San Zenone17:00 — San Michele',
     },
     {
-        title: 'Venerdì',
-        text: ['8:30 — San Michele', '17:00 — San Zenone'],
+        subtitle: 'Mercoledì',
+        text: '8:30 — San Michele17:00 — San Zenone',
+    },
+    {
+        subtitle: 'Giovedì',
+        text: '17:00 — San Zenone18:00 — San Michele',
+    },
+    {
+        subtitle: 'Venerdì',
+        text: '8:30 — San Michele17:00 — San Zenone',
     },    
 ];

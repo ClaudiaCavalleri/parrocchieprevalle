@@ -370,6 +370,10 @@ picture>img {
     border-bottom-right-radius: var(--radius-md);
 }
 
+/* MAP */
+.map-wrapper {
+    border-bottom-right-radius: var(--radius-md); // non funge
+}
 
 /* styles the "scroll to top" button */
 #scrollToTopBtn {

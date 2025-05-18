@@ -7,6 +7,8 @@ import MediaContentSection from "./components/templates/MediaContentSection/Medi
 import TabsSection from "./components/templates/TabsSection/TabsSection";
 import { madonnaDelCarrozzone } from "./data/carrozzone";
 import { codiciIban } from "./data/codiciIban";
+import { contatti } from "./data/contatti";
+import { indirizzi } from "./data/indirizzi";
 import { messeData } from "./data/orariMesse";
 import { storieParrocchie } from "./data/storiaParrocchie";
 
@@ -33,11 +35,7 @@ export default function App() {
         
         <MediaContentSection 
             mediaContent={{
-                content: {
-                    title: 'Orari S.Messe',
-                    subtitle: messeData[0].title,
-                    text: messeData[0].text[0],
-                },
+                contentList: messeData,
                 mediaPosition: 'left',
                 mediaProps: {
                     alt: '',
@@ -48,10 +46,7 @@ export default function App() {
 
         <MediaContentSection 
             mediaContent={{
-                content: {
-                    title: 'Contatti',
-                    text: 'Lorem Ipsum dolor sit amet',
-                },
+                contentList: contatti,
                 mediaPosition: 'right',
                 mediaProps: {
                     alt: '',
@@ -62,8 +57,9 @@ export default function App() {
 
         <CoverSection 
             titleContent={{
-                title: "Opere di bene",
-                subtitle: "Donazioni",
+                title: "Il dono che unisce",
+                subtitle: "Donare è un gesto semplice, ma carico di significato: è condividere ciò che abbiamo per il bene degli altri, è partecipare con gioia alla vita della nostra comunità.",
+                text: "Ogni offerta, piccola o grande, sostiene concretamente le opere parrocchiali e ci aiuta a crescere insieme nella fede e nella solidarietà.",
                 align: 'text-center',
             }}
             contentList={codiciIban}
@@ -75,10 +71,7 @@ export default function App() {
 
         <MediaContentSection 
             mediaContent={{
-                content: {
-                    title: storieParrocchie.title,
-                    text: storieParrocchie.text,
-                },
+                contentList: storieParrocchie,
                 mediaPosition: 'left',
                 mediaProps: {
                     alt: '',
@@ -89,12 +82,12 @@ export default function App() {
         Slider gallery
         <MediaContentSection 
             mediaContent={{
-                content: {
-                    title: madonnaDelCarrozzone.content?.title,
-                    text: madonnaDelCarrozzone.content?.text,
-                },
+                contentList: madonnaDelCarrozzone,
                 mediaPosition: 'right',
-                mediaProps: madonnaDelCarrozzone.mediaProps,
+                mediaProps: {
+                    alt: 'Santuario della Madonna del Carrozzone',
+                    src: 'src/assets/img/MadonnaDelCarrozzonePrevalle.jpg',
+                }
             }}
         />
         <CoverSection 
@@ -136,18 +129,14 @@ export default function App() {
         />
         <MediaContentSection 
             mediaContent={{
-                content: {
-                    title: 'Dove ci troviamo',
-                    subtitle: '',
-                    text: '',
-                },
+                contentList: indirizzi,
                 mediaPosition: 'right',
                 mediaProps: {
                     alt: '',
                     src: '',
                 },
                 mapProps: {
-                    src: 'https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4256.628010469242!2d10.415030141616315!3d45.54842884779589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPrevalle%20Parrocchia%20San%20Michele%2C%20Prevalle%20Parrocchia%20San%20Zenone!5e1!3m2!1sit!2sit!4v1747603559630!5m2!1sit!2sit'
+                    src: 'https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11176.768641800993!2d10.420367211410184!3d45.546459812638986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sprevalle%20parrocchie!5e0!3m2!1sit!2sit!4v1648989439564!5m2!1sit!2sit'
                 }
             }}
         />

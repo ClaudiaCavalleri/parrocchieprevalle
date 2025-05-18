@@ -12,6 +12,7 @@ export interface MediaContentProps extends DOMAttributes<HTMLOrSVGElement> {
     mapProps?: MapProps;
     mediaPosition?: 'left' | 'right';
     mediaProps?: ImageProps;
+    contentList?: ContentProps[];
 }
 
 const MediaContent: FC<MediaContentProps> = ({
@@ -19,6 +20,7 @@ const MediaContent: FC<MediaContentProps> = ({
     mapProps,
     mediaPosition = 'right',
     mediaProps,
+    contentList = [],
 }) => {
     const hasImage = !!mediaProps?.src
     const hasMap = !!mapProps?.src;
@@ -31,9 +33,13 @@ const MediaContent: FC<MediaContentProps> = ({
                     mediaPosition === 'left' ? 'place-second' : 'place-first',
                 ].join(' ')}
             >
-                <Content
-                    {...content}
-                />
+                {contentList.map((item, index) => (
+                    <Content
+                        key={index}
+                        {...content}
+                        {...item}
+                    />
+                ))}
             </div>
 
             {hasImage &&
