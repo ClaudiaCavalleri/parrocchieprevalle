@@ -18,9 +18,9 @@ const Section: FC<SectionProps> = ({
     ...props
 }) => {
     const componentClassName = [
+        className,
         'relative',
         bgColor,
-        className,
     ];
 
     return (

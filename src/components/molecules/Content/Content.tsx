@@ -6,6 +6,7 @@ import Title from '../../atoms/Title/Title';
 import Text from '../../atoms/Text/Text';
 
 export interface ContentProps extends TitleProps {
+    align?: 'text-center' | 'text-left';
     // cta?: CTA[];
     ctaClassName?: string;
     // ctaSize?: ButtonSizes;
@@ -18,7 +19,8 @@ export interface ContentProps extends TitleProps {
 }
 
 const Content: FC<ContentProps> = ({
-    // className = '',
+    align = 'text-left',
+    className = '',
     // cta = [],
     ctaClassName = '',
     // ctaSize = 'md',
@@ -34,8 +36,14 @@ const Content: FC<ContentProps> = ({
     const hasText: boolean = typeof text === 'string' && text !== '';
     // const hasCTA: boolean = Array.isArray(cta) && cta.length > 0;
 
+    const wrapperClassName = [
+        className,
+        'content-wrapper',
+        align
+    ].join(' ')
+
     return (
-        <div className="content-wrapper">
+        <div className={wrapperClassName}>
             {
                 hasTitle && (
                     <Title

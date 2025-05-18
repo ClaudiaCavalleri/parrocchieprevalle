@@ -1,24 +1,34 @@
 
-import BannerSection from "./components/templates/BannerSection/BannerSection";
+import CoverSection from "./components/templates/CoverSection/CoverSection";
 import Footer from "./components/templates/Footer/Footer";
 import Header from "./components/templates/Header/Header";
 import MediaContentSection from "./components/templates/MediaContentSection/MediaContentSection";
 import TabsSection from "./components/templates/TabsSection/TabsSection";
 import { madonnaDelCarrozzone } from "./data/carrozzone";
+import { codiciIban } from "./data/codiciIban";
 import { messeData } from "./data/orariMesse";
 import { storieParrocchie } from "./data/storiaParrocchie";
 
 export default function App() {
     return (<>
         <Header />
-        Hero section all'interno dell'header
-        <BannerSection 
+        <CoverSection 
+            height="full-height"
             titleContent={{
-                title: "Opere di bene",
-                subtitle: "Donazioni",
-                align: 'text-center',
+                title: "Parrocchie di Prevalle",
+                subtitle: "Lorem ipsum dolor sit amet",
+                text: 'Lorem ipsum dolor sit amet',
+                titleProps: {
+                    tag: 'h1'
+                },
+                align: 'text-left',
+            }}
+            mediaProps={{
+                alt: 'alt',
+                src: 'src/assets/img/banner chiese.jpg',
             }}
         />
+        
         
         <MediaContentSection 
             mediaContent={{
@@ -28,10 +38,13 @@ export default function App() {
                     text: messeData[0].text[0],
                 },
                 mediaPosition: 'left',
-                imageUrl: 'https://picsum.photos/600/400?random'
+                mediaProps: {
+                    alt: '',
+                    src: 'https://picsum.photos/600/400?random',
+                }
             }}
         />
-        {/* <TabsSection /> */}
+
         <MediaContentSection 
             mediaContent={{
                 content: {
@@ -39,9 +52,26 @@ export default function App() {
                     text: 'Lorem Ipsum dolor sit amet',
                 },
                 mediaPosition: 'right',
-                imageUrl: 'https://picsum.photos/600/400?random'
+                mediaProps: {
+                    alt: '',
+                    src: 'https://picsum.photos/600/400?random',
+                }
             }}
         />
+
+        <CoverSection 
+            titleContent={{
+                title: "Opere di bene",
+                subtitle: "Donazioni",
+                align: 'text-center',
+            }}
+            contentList={codiciIban}
+            mediaProps={{
+                alt: 'alt',
+                src: 'https://picsum.photos/600/400?random',
+            }}
+        />
+
         <MediaContentSection 
             mediaContent={{
                 content: {
@@ -49,7 +79,10 @@ export default function App() {
                     text: storieParrocchie.text,
                 },
                 mediaPosition: 'left',
-                imageUrl: 'https://picsum.photos/600/400?random'
+                mediaProps: {
+                    alt: '',
+                    src: 'https://picsum.photos/600/400?random',
+                }
             }}
         />
         Slider gallery
@@ -60,17 +93,17 @@ export default function App() {
                     text: madonnaDelCarrozzone.content?.text,
                 },
                 mediaPosition: 'right',
-                mediaProps: {
-                    alt: madonnaDelCarrozzone.alt,
-                    src: madonnaDelCarrozzone.imageUrl,
-                }
+                mediaProps: madonnaDelCarrozzone.mediaProps,
             }}
         />
-        <BannerSection 
+        <CoverSection 
             titleContent={{
                 title: "Bollettino parrochiale La Via",
                 subtitle: "Abbonati",
-                align: 'text-center',
+            }}
+            mediaProps={{
+                alt: '',
+                src: '',
             }}
         />
         <MediaContentSection 
@@ -80,7 +113,10 @@ export default function App() {
                     text: 'Lorem Ipsum dolor sit amet',
                 },
                 mediaPosition: 'left',
-                imageUrl: 'https://picsum.photos/600/400?random'
+                mediaProps: {
+                    alt: '',
+                    src: 'https://picsum.photos/600/400?random',
+                }
             }}
         />
         <MediaContentSection 
@@ -90,7 +126,10 @@ export default function App() {
                     text: 'Link social',
                 },
                 mediaPosition: 'right',
-                imageUrl: 'https://picsum.photos/600/400?random'
+                mediaProps: {
+                    alt: '',
+                    src: 'https://picsum.photos/600/400?random',
+                }
             }}
         />
         <MediaContentSection 
@@ -100,7 +139,10 @@ export default function App() {
                     text: 'DA implementare componente con mappa a destra e rounded',
                 },
                 mediaPosition: 'right',
-                imageUrl: 'https://picsum.photos/600/400?random'
+                mediaProps: {
+                    alt: '',
+                    src: 'https://picsum.photos/600/400?random',
+                }
             }}
         />
         <Footer />

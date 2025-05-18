@@ -21,6 +21,8 @@ export const madonnaDelCarrozzone: MediaContentProps = {
         Il santuario, pur nella sua semplicità architettonica, custodisce preziosi ex voto 
         e rappresenta un simbolo tangibile della storia e della spiritualità di Prevalle.`
     },
-    imageUrl: carroz,
-    alt: 'Santuario della Madonna del Carrozzone di Prevalle',
+    mediaProps: {
+        alt: 'Santuario della Madonna del Carrozzone',
+        src: carroz,
+    }
 }
