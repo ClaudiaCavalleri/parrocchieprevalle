@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* MOBILE FIRST max-width: 640px */
+/* XS - MOBILE FIRST */
 
 :root {
     /* Font families con fallback */
@@ -418,8 +418,18 @@ picture>img {
   background-color: #4527a0;
 }
 
+/* * */
+/* MEDIA QUERIES */
+/* * */
 
-@media only screen and (min-width: 641px) and (max-width: 768px) {
+
+/* SM - SMARTPHONES */
+@media only screen and (min-width: 480px) {
+
+}
+
+/* MD - TABLET MINI */
+@media only screen and (min-width: 641px) {
     .container {
         padding-inline: 2.5rem;
     }
@@ -429,7 +439,8 @@ picture>img {
     }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+/* MD - TABLET REGULAR */
+@media only screen and (min-width: 769px) {
 
     .section {
         margin-top: var(--margin-lg);
@@ -441,7 +452,8 @@ picture>img {
     }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+/* LG - LAPTOP */
+@media only screen and (min-width: 1025px) {
 
     .section {
         margin-top: var(--margin-xl);
@@ -453,7 +465,8 @@ picture>img {
     }
 }
 
-@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+/* XL - DESKTOP */
+@media only screen and (min-width: 1281px) {
 
     .section {
         margin-top: var(--margin-2xl);
@@ -465,7 +478,8 @@ picture>img {
     }
 }
 
-@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+/* 2XL - HD LARGE DESKTOP */
+@media only screen and (min-width: 1441px) {
 
     .section {
         margin-top: var(--margin-3xl);
@@ -477,6 +491,7 @@ picture>img {
     }
 }
 
+/* WIDE/ULTRA - HIGH RESOLUTION SCREEN */
 @media only screen and (min-width: 1681px) {
     .container {
         padding-inline: 10rem;
