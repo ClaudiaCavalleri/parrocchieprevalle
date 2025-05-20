@@ -94,7 +94,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-normal);
     line-height: var(--line-height-heading);
 }
 
@@ -219,6 +219,25 @@ footer {
     gap: var(--gap-md);
 }
 
+/* CTA */
+
+.cta {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: var(--secondary);
+}
+
+.cta-wrapper {
+    margin-top: var(--gap-md);
+}
 
 /* CONTENT MEDIA  */
 

@@ -6,14 +6,16 @@ import MediaContent, { MediaContentProps } from "../../organisms/MediaContent/Me
 
 interface MediaContentSectionProps {
     mediaContent: MediaContentProps;
+    idSection?: string;
 }
 
 const MediaContentSection: FC<MediaContentSectionProps> = ({
     mediaContent,
+    idSection = '',
 }) => {
 
     return (
-        <Section>
+        <Section id={idSection}>
             <Container>
                 <MediaContent 
                     {...mediaContent}

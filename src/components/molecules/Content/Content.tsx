@@ -1,16 +1,17 @@
 import type { FC, ReactNode } from 'react';
 import type { TextProps } from '../../atoms/Text/Text';
 import type { TitleProps } from '../../atoms/Title/Title';
+import type { ButtonProps } from '../../atoms/Button/Button';
 
 import Title from '../../atoms/Title/Title';
 import Text from '../../atoms/Text/Text';
 import React from 'react';
+import Button  from '../../atoms/Button/Button';
 
 export interface ContentProps extends TitleProps {
     align?: 'text-center' | 'text-left';
-    // cta?: CTA[];
+    cta?: ButtonProps;
     ctaClassName?: string;
-    // ctaSize?: ButtonSizes;
     subtitle?: ReactNode;
     subtitleProps?: TitleProps;
     text?: string|React.ReactNode;
@@ -22,9 +23,8 @@ export interface ContentProps extends TitleProps {
 const Content: FC<ContentProps> = ({
     align = 'text-left',
     className = '',
-    // cta = [],
+    cta,
     ctaClassName = '',
-    // ctaSize = 'md',
     subtitle,
     subtitleProps,
     text = '',
@@ -35,7 +35,7 @@ const Content: FC<ContentProps> = ({
     const hasTitle: boolean = typeof title === 'string' && title !== '';
     const hasSubtitle: boolean = typeof subtitle === 'string' && subtitle !== '';
     const hasText: boolean = typeof text === 'string' && text !== '';
-    // const hasCTA: boolean = Array.isArray(cta) && cta.length > 0;
+    const hasCTA: boolean = !!cta;
 
     const wrapperClassName = [
         className,
@@ -80,17 +80,13 @@ const Content: FC<ContentProps> = ({
                 )
             }
 
-            {/* {
+            {
                 hasCTA && (
-                    <div className="flex flex-row justify-between items-center u-spacer-lg first:mt-0">
-                        <BowButtonGroup
-                            className={ctaClassName}
-                            list={cta}
-                            size={ctaSize}
-                        />
+                    <div className={`cta-wrapper ${ctaClassName}`}>
+                        <Button {...cta} />
                     </div>
                 )
-            } */}
+            }
         </div>
     )
 }

@@ -26,9 +26,7 @@ const Footer: FC<FooterProps> = ({
                 <div className='footer-grid'>
                     <div className="footer-title">
                         <Image
-                            pictureClassName={[
-                                'media',
-                            ].join(' ')}
+                            pictureClassName='media'
                             {...mediaProps}
                         />
                         <Content

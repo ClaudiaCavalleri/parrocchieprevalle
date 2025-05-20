@@ -51,12 +51,13 @@ export default function App() {
         />
 
         <MediaContentSection 
+            idSection="#contatti"
             mediaContent={{
                 type: 'image',
                 content: {
                     title: 'Segreteria parrocchiale',
-                    subtitle: 'Per richieste di documenti, messe, iscrizioni e altro',
-                    text: `La segreteria si trova all'interno della canonica in via don Lodrini 1, accanto alla chiesa parrocchiale.`
+                    subtitle: 'La segreteria è a disposizone della comunità per ogni necessità, come richieste di documenti, messe e iscrizioni.',
+                    text: `Dove? All'interno della canonica in via don Lodrini 1, accanto alla chiesa parrocchiale di San Zenone (Prevalle sotto).`
                 },
                 contentList: contatti,
                 mediaPosition: 'right',
@@ -125,12 +126,14 @@ export default function App() {
         <CoverSection 
             titleContent={{
                 title: "Bollettino parrochiale La Via",
-                subtitle: "Abbonati",
+                subtitle: `Il nostro notiziario parrocchiale è disponibile sia cartaceo sia digitale.
+                    Se desideri abbonarti puoi contattare la segreteria parrocchiale.` ,
                 align: "text-center"
             }}
             mediaProps={{
                 alt: '',
-                src: '',
+                // src: '../src/assets/img/la_via.jpg',
+                src: ''
             }}
         />
         <MediaContentSection 
@@ -139,12 +142,18 @@ export default function App() {
                 content: {
                     title: 'Iscrizioni Grest',
                     subtitle: 'Le iscrizioni sono aperte dal al',
-                    text: `Inquadra il qr code o clicca il link, compila il modulo e conferma, per effettuare l'iscrizione`,
+                    text: `Inquadra il qr code o clicca sul pulsanto qui sotto. 
+                        Verrai reindirizzato al modulo in cui inserire i dati; 
+                        qui troverai tutte le informazioni, amche riguardo il pagamento, 
+                        che deve essere effettuato SOLO tramite bonifico. 
+                        Dopo aver confermato, se l'iscrizione è andata a buon fine riceverai una email di conferma, 
+                        con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.`,
+                    cta: {
+                        label: "Compila il modulo",
+                        href: ""
+                    }
                 },
                 contentList: [
-                    {
-                        text: 'link'
-                    },
                     {
                         subtitle: 'Grest San Zenone',
                         text: `Dal ... al... all'oratorio di S.Zenone`,

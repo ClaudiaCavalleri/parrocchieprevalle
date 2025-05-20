@@ -14,6 +14,10 @@ export const contatti: TextRowProps[] = [
         subtitle: <a href="tel:+393485876125"><h4>Telefono: 348 5876125</h4></a>,
         text: 'N.B: La segreteria è reperibile telefonicamente solo durante gli orari di apertura.',
     },
+    {
+        subtitle: <a href="mailto:segreteria@parrocchieprevalle.it"><h4>Email: segreteria@parrocchieprevalle.it</h4></a>,
+        text: 'Puoi contattarci anche tramite email.',
+    },
     
     // {
     //     subtitle: 'Parroco don Fabrizio Gobbi',
