@@ -35,6 +35,7 @@ export default function App() {
         
         <MediaContentSection 
             mediaContent={{
+                type: 'image',
                 content: {
                     title: 'orari messe',
                     subtitle: 'lorem ipsum dolor sit amet',
@@ -51,6 +52,7 @@ export default function App() {
 
         <MediaContentSection 
             mediaContent={{
+                type: 'image',
                 content: {
                     title: 'Segreteria parrocchiale',
                     subtitle: 'Per richieste di documenti, messe, iscrizioni e altro',
@@ -81,6 +83,7 @@ export default function App() {
 
         <MediaContentSection 
             mediaContent={{
+                type: 'image',
                 content: {
                     title: 'Parrocchie di Prevalle',
                     subtitle: 'Le origini',
@@ -101,6 +104,7 @@ export default function App() {
         {/* Slider gallery */}
         <MediaContentSection 
             mediaContent={{
+                type: 'image',
                 content: {
                     title: 'Santuario della Madonna del Carrozzone',
                     subtitle: 'Un luogo di fede, memoria e gratitudine nel cuore della comunità',
@@ -131,6 +135,7 @@ export default function App() {
         />
         <MediaContentSection 
             mediaContent={{
+                type: 'image',
                 content: {
                     title: 'Iscrizioni Grest',
                     subtitle: 'Le iscrizioni sono aperte dal al',
@@ -156,8 +161,10 @@ export default function App() {
                 }
             }}
         />
+
         {/* <MediaContentSection 
             mediaContent={{
+                type: 'social',
                 content: {
                     title: 'Segui la nostra pagina',
                     text: 'Link social',
@@ -165,12 +172,14 @@ export default function App() {
                 mediaPosition: 'right',
                 mediaProps: {
                     alt: '',
-                    src: 'https://picsum.photos/600/400?random',
+                    src: '',
                 }
             }}
         /> */}
+
         <MediaContentSection 
             mediaContent={{
+                type: 'map',
                 contentList: indirizzi,
                 mediaPosition: 'right',
                 mediaProps: {

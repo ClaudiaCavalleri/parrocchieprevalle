@@ -388,6 +388,15 @@ picture>img {
     border-bottom-right-radius: var(--radius-md); // non funge
 }
 
+/* FACEBOOK WIDGET */
+.fb-widget-width {
+    width: 300;
+}
+
+.fb-widget-height {
+    height: 500;
+}
+
 /* styles the "scroll to top" button */
 #scrollToTopBtn {
   display: none;
