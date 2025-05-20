@@ -32,7 +32,59 @@ export default function App() {
             }}
         />
         
-        
+        <MediaContentSection 
+            mediaContent={{
+                type: 'image',
+                content: {
+                    title: 'Iscrizioni Grest',
+                    subtitle: 'Le iscrizioni sono aperte dal al',
+                    text: `Inquadra il qr code o clicca sul pulsanto qui sotto. 
+                        Verrai reindirizzato al modulo in cui inserire i dati; 
+                        qui troverai tutte le informazioni, amche riguardo il pagamento, 
+                        che deve essere effettuato SOLO tramite bonifico. 
+                        Dopo aver confermato, se l'iscrizione è andata a buon fine riceverai una email di conferma, 
+                        con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.`,
+                    cta: {
+                        label: "Compila il modulo",
+                        href: ""
+                    }
+                },
+                contentList: [
+                    {
+                        subtitle: 'Grest San Zenone',
+                        text: `Dal ... al... all'oratorio di S.Zenone`,
+                    },
+                    {
+                        subtitle: 'Grest San Michele',
+                        text: `Dal ... al... all'oratorio di S.Michele`,
+                    },
+                ],
+                mediaPosition: 'left',
+                mediaProps: {
+                    alt: '',
+                    src: 'https://picsum.photos/600/400?random',
+                }
+            }}
+        />
+
+        <MediaContentSection 
+            idSection="contatti"
+            mediaContent={{
+                type: 'image',
+                content: {
+                    title: 'Segreteria parrocchiale',
+                    subtitle: 'La segreteria è a disposizone della comunità per ogni necessità, come richieste di documenti, messe e iscrizioni.',
+                    text: `Dove? All'interno della canonica in via don Lodrini 1, accanto alla chiesa parrocchiale di San Zenone (Prevalle sotto).`
+                },
+                contentList: contatti,
+                mediaPosition: 'right',
+                mediaProps: {
+                    alt: '',
+                    src: 'https://picsum.photos/600/400?random',
+                }
+            }}
+        />
+
         <MediaContentSection 
             mediaContent={{
                 type: 'image',
@@ -43,24 +95,6 @@ export default function App() {
                 },
                 tabList: messeData,
                 mediaPosition: 'left',
-                mediaProps: {
-                    alt: '',
-                    src: 'https://picsum.photos/600/400?random',
-                }
-            }}
-        />
-
-        <MediaContentSection 
-            idSection="#contatti"
-            mediaContent={{
-                type: 'image',
-                content: {
-                    title: 'Segreteria parrocchiale',
-                    subtitle: 'La segreteria è a disposizone della comunità per ogni necessità, come richieste di documenti, messe e iscrizioni.',
-                    text: `Dove? All'interno della canonica in via don Lodrini 1, accanto alla chiesa parrocchiale di San Zenone (Prevalle sotto).`
-                },
-                contentList: contatti,
-                mediaPosition: 'right',
                 mediaProps: {
                     alt: '',
                     src: 'https://picsum.photos/600/400?random',
@@ -127,7 +161,11 @@ export default function App() {
             titleContent={{
                 title: "Bollettino parrochiale La Via",
                 subtitle: `Il nostro notiziario parrocchiale è disponibile sia cartaceo sia digitale.
-                    Se desideri abbonarti puoi contattare la segreteria parrocchiale.` ,
+                    Se desideri abbonarti puoi contattare la segreteria parrocchiale.`,
+                cta: {
+                    label: 'Contattaci',
+                    targetId: 'contatti',
+                },
                 align: "text-center"
             }}
             mediaProps={{
@@ -136,40 +174,7 @@ export default function App() {
                 src: ''
             }}
         />
-        <MediaContentSection 
-            mediaContent={{
-                type: 'image',
-                content: {
-                    title: 'Iscrizioni Grest',
-                    subtitle: 'Le iscrizioni sono aperte dal al',
-                    text: `Inquadra il qr code o clicca sul pulsanto qui sotto. 
-                        Verrai reindirizzato al modulo in cui inserire i dati; 
-                        qui troverai tutte le informazioni, amche riguardo il pagamento, 
-                        che deve essere effettuato SOLO tramite bonifico. 
-                        Dopo aver confermato, se l'iscrizione è andata a buon fine riceverai una email di conferma, 
-                        con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.`,
-                    cta: {
-                        label: "Compila il modulo",
-                        href: ""
-                    }
-                },
-                contentList: [
-                    {
-                        subtitle: 'Grest San Zenone',
-                        text: `Dal ... al... all'oratorio di S.Zenone`,
-                    },
-                    {
-                        subtitle: 'Grest San Michele',
-                        text: `Dal ... al... all'oratorio di S.Michele`,
-                    },
-                ],
-                mediaPosition: 'left',
-                mediaProps: {
-                    alt: '',
-                    src: 'https://picsum.photos/600/400?random',
-                }
-            }}
-        />
+        
 
         {/* <MediaContentSection 
             mediaContent={{

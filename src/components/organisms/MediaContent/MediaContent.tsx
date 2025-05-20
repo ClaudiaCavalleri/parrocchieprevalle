@@ -70,7 +70,8 @@ const MediaContent: FC<MediaContentProps> = ({
                 <Image
                     pictureClassName={[
                         'media',
-                        mediaPosition === 'left' ? 'place-first' : 'place-second'
+                        mediaPosition === 'left' ? 'place-first' : 'place-second',
+                        'rounded-corner'
                     ].join(' ')}
                     {...mediaProps}
                 />

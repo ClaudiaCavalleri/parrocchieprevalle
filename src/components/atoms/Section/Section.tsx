@@ -28,6 +28,7 @@ const Section: FC<SectionProps> = ({
     return (
         <Tag
             className={componentClassName.join(' ').trim()}
+            id={id}
             {...props}
         >
             {children}

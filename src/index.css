@@ -205,6 +205,10 @@ hr {
     width: 100%;
 }
 
+.rounded-corner {
+    border-bottom-right-radius: var(--radius-lg);
+}
+
 .relative {
     position: relative;
 }

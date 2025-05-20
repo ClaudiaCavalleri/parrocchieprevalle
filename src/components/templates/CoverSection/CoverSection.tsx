@@ -43,6 +43,7 @@ const CoverSection: FC<CoverSectionProps> = ({
                                     title={item.title}
                                     subtitle={item.subtitle}
                                     text={item.text}
+                                    cta={item.cta}
                                     align="text-center"
                                 />
                             ))}
