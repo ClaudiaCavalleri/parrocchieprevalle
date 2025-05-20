@@ -191,7 +191,49 @@ export default function App() {
                 }
             }}
         />
-        <Footer />
+
+        <Footer 
+            content= {{
+                title: 'Parrocchie di S.Michele e S.Zenone in Prevalle',
+                subtitle: '',
+                text: <a href="tel:+393485876125"><p>Telefono: 348 5876125</p></a>,
+            }}
+            contentList = {[
+                {
+                    subtitle: '',
+                    text: `Privacy Policy`,
+                    textProps: {
+                        className: 'policy'
+                    }
+                },
+                {
+                    subtitle: '',
+                    text: `Cookie policy`,
+                    textProps: {
+                        className: 'policy'
+                    }
+                },
+                {
+                    subtitle: '',
+                    text: `© Copyright | 2025`,
+                    textProps: {
+                        className: 'policy'
+                    }
+                },
+                {
+                    subtitle: '',
+                    text: `Credits: Me`,
+                    textProps: {
+                        className: 'policy'
+                    }
+                },
+            ]}
+            mediaProps = {{
+                alt: '',
+                src: 'https://picsum.photos/600/400?random',
+            }}
+        />
+
        </>
     );
 }

@@ -49,6 +49,7 @@
     --radius-lg: 30px;
 
     /* Gap */
+    --gap-none: 0rem;
     --gap-sm: 0.75rem;
     --gap-md: 1.25rem;
     --gap-lg: 2.25rem;
@@ -135,6 +136,11 @@ a {
   color: var(--primary-dark);
 }
 
+hr {
+    border: 1px solid var(--primary-medium);
+    width: 100%;
+}
+
 /* BACKGROUND AND TEXT COLORS */
 
 .bg-primary-dark {
@@ -201,6 +207,10 @@ a {
 
 .relative {
     position: relative;
+}
+
+footer {
+    padding-block: var(--margin-sm);
 }
 
 .grid-container {
@@ -381,6 +391,26 @@ picture>img {
     height: 500;
 }
 
+/* FOOTER */
+.footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    border-color: var(--light);
+    border-top-width: 8px;
+    border-bottom-width: 0px;
+}
+
+.footer-grid .text-list-wrapper {
+    margin-top: var(--gap-none);
+    gap: var(--gap-none);
+}
+
+.policy {
+    margin-top: 0px;
+    font-size: var(--font-size-sm);
+}
+
 /* styles the "scroll to top" button */
 #scrollToTopBtn {
   display: none;
@@ -495,6 +525,36 @@ picture>img {
     .container {
         padding-inline: 3rem;
     }
+
+    footer {
+        padding-top: var(--margin-sm);
+        padding-bottom: var(--margin-text)
+    }
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-md);
+        border-right-width: 0px;
+        border-left-width: 1px;
+        align-items: center;
+    }
+
+    .footer-title {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--gap-lg);
+    }
+
+    .footer-title>.content-wrapper {
+        grid-column: span 2;
+    }
+
+    .footer-grid .text-list-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap-sm);
+    }
+
 }
 
 /* LG - LAPTOP */
@@ -520,6 +580,11 @@ picture>img {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--gap-lg);
     }
+
+    footer {
+        padding-top: var(--margin-md);
+    }
+
 }
 
 /* XL - DESKTOP */
