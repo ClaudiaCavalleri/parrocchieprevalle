@@ -402,7 +402,13 @@ picture>img {
 
 /* MAP */
 .map-wrapper {
-    border-bottom-right-radius: var(--radius-md); // non funge
+    border-bottom-right-radius: var(--radius-md);
+    aspect-ratio: 4/3;
+}
+
+.map {
+    border-bottom-right-radius: var(--radius-md);
+    max-width: 300px;
 }
 
 /* FACEBOOK WIDGET */
@@ -462,7 +468,15 @@ picture>img {
 
 /* SM - SMARTPHONES */
 @media only screen and (min-width: 480px) {
+    /* MAP */
+    .map-wrapper {
+        border-bottom-right-radius: var(--radius-md);
+        aspect-ratio: 3/2;
+    }
 
+    .map {
+        max-width: 550px;
+    }
 }
 
 /* MD - TABLET MINI */
@@ -535,6 +549,14 @@ picture>img {
     .tab-wrapper {
         margin-top: var(--gap-md);
     }
+
+    .map-wrapper {
+        aspect-ratio: 4/3;
+    }
+
+    .map {
+        max-width: 200px;
+    }
 }
 
 /* MD - TABLET REGULAR */
@@ -547,6 +569,10 @@ picture>img {
 
     .container {
         padding-inline: 3rem;
+    }
+
+    .map {
+        max-width: 300px;
     }
 
     footer {

@@ -2,10 +2,6 @@ import type { ContentProps } from "../components/molecules/Content/Content";
 
 export const indirizzi: ContentProps[] = [
     {
-        title: 'Dove ci troviamo',
-        subtitle: 'Luoghi dove il silenzio si fa preghiera, e ogni cuore trova un tempo di pace e racccoglimento.',
-    },
-    {
         subtitle: 'Chiesa parrocchiale di San Michele',
         text: 'via San Michele, 18',
     },

@@ -26,8 +26,8 @@ const Map: React.FC<MapProps> = ({
                 <iframe
                     className={`map ${className}`}
                     src={src}
-                    width={width}
-                    height={height}
+                    width="100%"
+                    height="100%"
                     style={{ border: 0 }}
                     allowFullScreen 
                     loading="lazy" 

@@ -194,6 +194,11 @@ export default function App() {
         <MediaContentSection 
             mediaContent={{
                 type: 'map',
+                content: {
+                    title: 'I luoghi dello spirito',
+                    subtitle: 'Dove il silenzio si fa preghiera, e ogni cuore trova un tempo di pace e racccoglimento.',
+                    text: '',
+                },
                 contentList: indirizzi,
                 mediaPosition: 'right',
                 mediaProps: {
