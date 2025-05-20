@@ -1,17 +1,6 @@
-import type { MediaContentProps } from "src/components/organisms/MediaContent/MediaContent";
-import carroz from "../assets/img/MadonnaDelCarrozzonePrevalle.jpg"
-import { ContentProps } from "src/components/molecules/Content/Content";
+import type { TextRowProps } from "src/components/molecules/TextRow/TextRow";
 
-export const madonnaDelCarrozzone: ContentProps[] = [
-    {
-        title: 'Santuario della Madonna del Carrozzone',
-        subtitle: 'Un luogo di fede, memoria e gratitudine nel cuore della comunità',
-        text: `Il Santuario della Madonna del Carrozzone, situato al confine tra Prevalle e Gavardo, 
-            è un luogo di profonda devozione popolare, la cui origine risale almeno al XIV secolo, 
-            come attestano documenti che menzionano il toponimo "Carazone" o "Carezon".
-            La denominazione "Carrozzone" sembra derivare da un'evoluzione linguistica del termine latino 
-            *carex*, che indica un luogo paludoso ricco di carici, piante tipiche delle zone umide.`
-    },
+export const madonnaDelCarrozzone: TextRowProps[] = [
     {
         subtitle: 'Il voto del 1836 e la nascita del santuario',
         text: `La devozione verso la Madonna del Carrozzone si intensificò nel 1836, 

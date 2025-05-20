@@ -86,7 +86,7 @@ body {
     font-weight: var(--font-weight-normal);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-    color: var(--dark);
+    color: var(--primary-dark);
     background-color: var(--light);
 }
 
@@ -131,7 +131,7 @@ i {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-dark);
 }
 
 /* BACKGROUND AND TEXT COLORS */
@@ -284,6 +284,19 @@ picture>img {
     gap: var(--gap-md);
 }
 
+/* TEXT LIST + ROW */
+.text-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    margin-top: var(--gap-lg);
+}
+
+.text-row-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+}
 
 /* COVER - BANNER */
 .full-height {

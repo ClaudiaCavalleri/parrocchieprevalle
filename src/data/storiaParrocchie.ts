@@ -1,16 +1,6 @@
-import type { ContentProps } from "src/components/molecules/Content/Content";
+import type { TextRowProps } from "src/components/molecules/TextRow/TextRow";
 
-export const storieParrocchie: ContentProps[] = [
-    {
-        title: 'Le parrocchie di Prevalle',
-        subtitle: 'Le origini',
-        text: `Prevalle, situata nella provincia di Brescia, 
-            affonda le sue radici storiche nei borghi di Goglione Sopra e Goglione Sotto. 
-            Nel 1792, queste due comunità furono separate sia amministrativamente che spiritualmente, 
-            dando origine alle parrocchie di San Michele Arcangelo e San Zenone. Successivamente, nel 1928, 
-            con un Regio Decreto, le due comunità furono riunificate sotto il nome di Prevalle, 
-            che significa "prima della Valle (Sabbia)".`
-    },
+export const storieParrocchie: TextRowProps[] = [
     {
         subtitle: 'Parrocchia di San Zenone (Prevalle Sotto)',
         text: `La prima menzione di una cappella dedicata a San Zenone risale al 12 giugno 1175. 

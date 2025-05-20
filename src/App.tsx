@@ -35,6 +35,11 @@ export default function App() {
         
         <MediaContentSection 
             mediaContent={{
+                content: {
+                    title: 'orari messe',
+                    subtitle: 'lorem ipsum dolor sit amet',
+                    text: 'loremi psum dolor sit amet',
+                },
                 contentList: messeData,
                 mediaPosition: 'left',
                 mediaProps: {
@@ -46,6 +51,11 @@ export default function App() {
 
         <MediaContentSection 
             mediaContent={{
+                content: {
+                    title: 'Segreteria parrocchiale',
+                    subtitle: 'Per richieste di documenti, messe, iscrizioni e altro',
+                    text: `La segreteria si trova all'interno della canonica in via don Lodrini 1, accanto alla chiesa parrocchiale.`
+                },
                 contentList: contatti,
                 mediaPosition: 'right',
                 mediaProps: {
@@ -71,6 +81,15 @@ export default function App() {
 
         <MediaContentSection 
             mediaContent={{
+                content: {
+                    title: 'Parrocchie di Prevalle',
+                    subtitle: 'Le origini',
+                    text: `Prevalle affonda le sue radici storiche nei borghi di Goglione Sopra e Goglione Sotto.
+                    Nel 1792, queste due comunità furono separate sia amministrativamente che spiritualmente, 
+                    dando origine alle parrocchie di San Michele Arcangelo e San Zenone. Successivamente, nel 1928, 
+                    con un Regio Decreto, le due comunità furono riunificate sotto il nome di Prevalle, 
+                    che significa "prima della Valle (Sabbia)".`
+                },
                 contentList: storieParrocchie,
                 mediaPosition: 'left',
                 mediaProps: {
@@ -79,9 +98,18 @@ export default function App() {
                 }
             }}
         />
-        Slider gallery
+        {/* Slider gallery */}
         <MediaContentSection 
             mediaContent={{
+                content: {
+                    title: 'Santuario della Madonna del Carrozzone',
+                    subtitle: 'Un luogo di fede, memoria e gratitudine nel cuore della comunità',
+                     text: `Il Santuario della Madonna del Carrozzone, situato al confine tra Prevalle e Gavardo, 
+                        è un luogo di profonda devozione popolare, la cui origine risale almeno al XIV secolo, 
+                        come attestano documenti che menzionano il toponimo "Carazone" o "Carezon".
+                        La denominazione "Carrozzone" sembra derivare da un'evoluzione linguistica del termine latino 
+                        *carex*, che indica un luogo paludoso ricco di carici, piante tipiche delle zone umide.`
+                },
                 contentList: madonnaDelCarrozzone,
                 mediaPosition: 'right',
                 mediaProps: {
@@ -105,8 +133,22 @@ export default function App() {
             mediaContent={{
                 content: {
                     title: 'Iscrizioni Grest',
-                    text: 'Lorem Ipsum dolor sit amet',
+                    subtitle: 'Le iscrizioni sono aperte dal al',
+                    text: `Inquadra il qr code o clicca il link, compila il modulo e conferma, per effettuare l'iscrizione`,
                 },
+                contentList: [
+                    {
+                        text: 'link'
+                    },
+                    {
+                        subtitle: 'Grest San Zenone',
+                        text: `Dal ... al... all'oratorio di S.Zenone`,
+                    },
+                    {
+                        subtitle: 'Grest San Michele',
+                        text: `Dal ... al... all'oratorio di S.Michele`,
+                    },
+                ],
                 mediaPosition: 'left',
                 mediaProps: {
                     alt: '',
@@ -114,7 +156,7 @@ export default function App() {
                 }
             }}
         />
-        <MediaContentSection 
+        {/* <MediaContentSection 
             mediaContent={{
                 content: {
                     title: 'Segui la nostra pagina',
@@ -126,7 +168,7 @@ export default function App() {
                     src: 'https://picsum.photos/600/400?random',
                 }
             }}
-        />
+        /> */}
         <MediaContentSection 
             mediaContent={{
                 contentList: indirizzi,

@@ -1,18 +1,19 @@
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import type { TextProps } from '../../atoms/Text/Text';
 import type { TitleProps } from '../../atoms/Title/Title';
 
 import Title from '../../atoms/Title/Title';
 import Text from '../../atoms/Text/Text';
+import React from 'react';
 
 export interface ContentProps extends TitleProps {
     align?: 'text-center' | 'text-left';
     // cta?: CTA[];
     ctaClassName?: string;
     // ctaSize?: ButtonSizes;
-    subtitle?: string;
+    subtitle?: ReactNode;
     subtitleProps?: TitleProps;
-    text?: string;
+    text?: string|React.ReactNode;
     textProps?: TextProps;
     title?: string;
     titleProps?: TitleProps;
@@ -24,7 +25,7 @@ const Content: FC<ContentProps> = ({
     // cta = [],
     ctaClassName = '',
     // ctaSize = 'md',
-    subtitle = '',
+    subtitle,
     subtitleProps,
     text = '',
     textProps,
@@ -62,7 +63,7 @@ const Content: FC<ContentProps> = ({
                     <Title
                         className="mt-6 first:mt-0"
                         size="md"
-                        tag='h3'
+                        tag='h4'
                         {...subtitleProps}
                     >
                         {subtitle || subtitleProps?.title}

@@ -1,9 +1,13 @@
 import type { DOMAttributes, FC } from 'react';
 import type { MapProps } from '../../atoms/Map/Map';
+import type { TextRowProps } from 'src/components/molecules/TextRow/TextRow';
+import type { ContentProps } from '../../molecules/Content/Content';
+import type { ImageProps } from '../../atoms/Image/Image';
 
-import Content, { ContentProps } from '../../molecules/Content/Content';
-import Image, { ImageProps } from '../../atoms/Image/Image';
+import Content from '../../molecules/Content/Content';
+import Image from '../../atoms/Image/Image';
 import Map from '../../atoms/Map/Map';
+import TextList from '../../cells/TextList/TextList';
 
 export interface MediaContentProps extends DOMAttributes<HTMLOrSVGElement> {
     alt?: string;
@@ -12,7 +16,7 @@ export interface MediaContentProps extends DOMAttributes<HTMLOrSVGElement> {
     mapProps?: MapProps;
     mediaPosition?: 'left' | 'right';
     mediaProps?: ImageProps;
-    contentList?: ContentProps[];
+    contentList?: TextRowProps[];
 }
 
 const MediaContent: FC<MediaContentProps> = ({
@@ -22,6 +26,7 @@ const MediaContent: FC<MediaContentProps> = ({
     mediaProps,
     contentList = [],
 }) => {
+    const hasContentList: boolean = Array.isArray(contentList) && contentList.length > 0;
     const hasImage = !!mediaProps?.src
     const hasMap = !!mapProps?.src;
 
@@ -33,13 +38,14 @@ const MediaContent: FC<MediaContentProps> = ({
                     mediaPosition === 'left' ? 'place-second' : 'place-first',
                 ].join(' ')}
             >
-                {contentList.map((item, index) => (
-                    <Content
-                        key={index}
-                        {...content}
-                        {...item}
+                <Content
+                    {...content}
+                />
+                {hasContentList && 
+                    <TextList
+                        list={contentList}
                     />
-                ))}
+                }
             </div>
 
             {hasImage &&
