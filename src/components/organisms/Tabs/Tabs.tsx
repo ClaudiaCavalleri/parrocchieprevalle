@@ -1,29 +1,26 @@
 import type { FC } from "react";
-import TabsItem, { TabsItemProps } from "../../molecules/TabsItem/TabsItem";
-import { tabHeadMesse } from "../../../data/orariMesse";
+import type { TextRowProps } from "../../molecules/TextRow/TextRow";
 
-interface Tabsprops {
-    list?: TabsItemProps[];
+import TextRow from "../../molecules/TextRow/TextRow";
+
+interface TabProps {
+    list?: TextRowProps[];
 }
 
-const Tabs: FC<Tabsprops> = ({
+const Tab: FC<TabProps> = ({
     list = [],
 }) => {
 
     return (
-        <table className="tabs-wrapper">
-            <thead>
-                <TabsItem 
-                    title={tabHeadMesse.title}
-                    text={tabHeadMesse.text}
-                />
-            </thead>
+        <table className="tab-wrapper">
             <tbody>
                 {list.map((item, index) => (
-                    <TabsItem 
+                    <TextRow 
                         key={index}
-                        title={item.title}
+                        subtitle={item.subtitle}
                         text={item.text}
+                        subtitleProps={item.subtitleProps}
+                        textProps={item.textProps}
                     />
                 ))}
             </tbody>
@@ -31,4 +28,4 @@ const Tabs: FC<Tabsprops> = ({
     )
 }
 
-export default Tabs;
+export default Tab;

@@ -20,7 +20,7 @@ export default function App() {
             titleContent={{
                 title: "Parrocchie di Prevalle",
                 subtitle: "Lorem ipsum dolor sit amet",
-                text: 'Lorem ipsum dolor sit amet',
+                text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet ',
                 titleProps: {
                     tag: 'h1'
                 },
@@ -39,9 +39,9 @@ export default function App() {
                 content: {
                     title: 'orari messe',
                     subtitle: 'lorem ipsum dolor sit amet',
-                    text: 'loremi psum dolor sit amet',
+                    text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet ',
                 },
-                contentList: messeData,
+                tabList: messeData,
                 mediaPosition: 'left',
                 mediaProps: {
                     alt: '',

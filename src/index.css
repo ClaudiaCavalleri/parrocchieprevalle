@@ -29,6 +29,7 @@
     --line-height-heading: 1.2;
 
     /* Margini */
+    --margin-text: 12px;
     --margin-2xs: 28px;
     --margin-xs: 36px;
     --margin-sm: 40px;
@@ -157,12 +158,30 @@ a {
     border: var(--border-width-sm) solid var(--primary);
 }
 
+
+/* FONT STYLE */
+
 .text-center {
     text-align: center;
 }
 
 .text-left {
     text-align: left;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.mt {
+    margin-top: var(--margin-text);
+}
+.mt:first {
+    margin-top: 0px;
 }
 
 /* HTML Tags */
@@ -186,15 +205,17 @@ a {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: var(--gap-md);
 }
 
+
+/* CONTENT MEDIA  */
+
 .content-media-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--gap-lg);
-    align-items: stretch;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--gap-md);
 }
 
 .tabs-wrapper {
@@ -239,63 +260,26 @@ picture>img {
     object-position: center;
 }
 
-.place-first {
-    order: 1;
-}
-
-.place-second {
-    order: 2;  //da sistemare
-}
-
-.content-media-grid .content {
-    grid-column: span 2;
-}
-
-.content-media-grid .media {
-    grid-column: span 1;
-}
-
-.content-media-grid .place-first.content {
-    order: 1;
-    grid-column-start: 1;
-    grid-column: span 2;
-}
-
-.content-media-grid .place-second.content {
-    order: 2;
-    grid-column-start: 2;
-    grid-column: span 2;
-}
-
-.content-media-grid .place-first.media {
-    order: 1;
-    grid-column-start: 1;
-}
-
-.content-media-grid .place-second.media {
-    order: 2;
-    grid-column-start: 3;
-}
 
 /* CONTENT WRAPPER */
 .content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-md);
+    /* gap: var(--gap-md); */
 }
 
 /* TEXT LIST + ROW */
 .text-list-wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-lg);
-    margin-top: var(--gap-lg);
+    gap: var(--gap-sm);
+    margin-top: var(--gap-sm);
 }
 
 .text-row-wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-md);
+    /* gap: var(--gap-md); */
 }
 
 /* COVER - BANNER */
@@ -430,12 +414,73 @@ picture>img {
 
 /* MD - TABLET MINI */
 @media only screen and (min-width: 641px) {
+
     .container {
         padding-inline: 2.5rem;
     }
+
     .content-media-grid {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: var(--gap-md);
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--gap-lg);
+        align-items: stretch;
+    }
+
+    .place-first {
+        order: 1;
+    }
+
+    .place-second {
+        order: 2;  //da sistemare
+    }
+
+    .content-media-grid .content {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .content-media-grid .media {
+        grid-column: span 1;
+    }
+
+    .content-media-grid .place-first.content {
+        order: 1;
+        grid-column-start: 1;
+        grid-column: span 2;
+    }
+
+    .content-media-grid .place-second.content {
+        order: 2;
+        grid-column-start: 2;
+        grid-column: span 2;
+    }
+
+    .content-media-grid .place-first.media {
+        order: 1;
+        grid-column-start: 1;
+    }
+
+    .content-media-grid .place-second.media {
+        order: 2;
+        grid-column-start: 3;
+    }
+
+    .content-media-grid .content-wrapper {
+        grid-column: span 2;
+    }
+
+    .content-media-grid .content-wrapper,
+    .content-media-grid .text-list-wrapper {
+        grid-column: span 2;
+    }
+
+    .content-media-grid .tab-wrapper {
+        grid-column: span 2;
+    }
+
+    .tab-wrapper {
+        margin-top: var(--gap-md);
     }
 }
 
@@ -462,6 +507,18 @@ picture>img {
 
     .container {
         padding-inline: 6rem;
+    }
+
+    .content-media-grid .tab-wrapper>tbody {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--gap-lg);
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--gap-lg);
     }
 }
 

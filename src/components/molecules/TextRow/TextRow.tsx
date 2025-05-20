@@ -36,8 +36,7 @@ const TextRow: FC<TextRowProps> = ({
             {
                 hasSubtitle && (
                     <Title
-                        className="mt-6 first:mt-0"
-                        size="md"
+                        className="mt"
                         tag='h4'
                         {...subtitleProps}
                     >
@@ -52,7 +51,7 @@ const TextRow: FC<TextRowProps> = ({
                         text.map((item, index) => (
                             <Text
                                 key={index}
-                                className="mt-6 first:mt-0"
+                                className="mt"
                                 {...textProps}
                             >
                                 {item}
@@ -60,7 +59,7 @@ const TextRow: FC<TextRowProps> = ({
                         ))
                     ) : (
                         <Text
-                            className="mt-6 first:mt-0"
+                            className="mt"
                             {...textProps}
                         >
                             {text}

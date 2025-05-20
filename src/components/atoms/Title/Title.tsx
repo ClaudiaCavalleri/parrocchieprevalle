@@ -1,73 +1,22 @@
 import React, { FC, HTMLAttributes } from 'react';
 
-export type TitleSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
-
 export interface TitleProps extends HTMLAttributes<HTMLOrSVGElement> {
     className?: string;
-    size?: TitleSize;
     tag?: React.ElementType;
-    weight?: 'font-regular' | 'font-medium' | 'font-bold';
-    uppercase?: boolean;
+    weight?: 'font-regular' | 'font-bold';
 }
 
 const Title: FC<TitleProps> = ({
-    className = 'text-red-300',
+    className = '',
     children,
-    size = 'lg',
     tag: Tag = 'h1',
     weight = 'font-regular',
-    uppercase = true,
     ...props
 }) => {
-    const uppercaseClass = uppercase ? 'uppercase' : '';
     const componentClassName = [
         className,
         weight,
-        uppercaseClass,
     ];
-
-    let sizeClass = '';
-    switch (size) {
-        case 'xs':
-            // 18px
-            sizeClass = 'text-md';
-            break;
-
-        case 'sm':
-            // 24px
-            sizeClass = 'text-lg xl:text-xl';
-            break;
-
-        case 'md':
-            // 36px
-            sizeClass = 'text-xl md:text-2xl xl:text-4xl';
-            break;
-
-        case 'lg':
-            // 60px
-            sizeClass = 'text-3xl md:text-4xl xl:text-6xl';
-            break;
-
-        case 'xl':
-            // 72px
-            sizeClass = 'text-4xl md:text-5xl xl:text-7xl';
-            break;
-
-        case '2xl':
-            // 96px
-            sizeClass = 'text-4xl sm:text-5xl md:text-6xl 2xl:text-8xl';
-            break;
-
-        case '3xl':
-            //128px
-            sizeClass = 'text-5xl sm:text-6xl md:text-7xl 2xl:text-9xl';
-            break;
-
-        default:
-            break;
-    }
-
-    componentClassName.push(sizeClass);
 
     return (
         <Tag

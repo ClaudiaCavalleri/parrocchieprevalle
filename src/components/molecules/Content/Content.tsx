@@ -48,8 +48,7 @@ const Content: FC<ContentProps> = ({
             {
                 hasTitle && (
                     <Title
-                        className="mt-6 first:mt-0"
-                        size="lg"
+                        className="mt"
                         tag='h2'
                         {...titleProps}
                     >
@@ -61,8 +60,7 @@ const Content: FC<ContentProps> = ({
             {
                 hasSubtitle && (
                     <Title
-                        className="mt-6 first:mt-0"
-                        size="md"
+                        className="mt"
                         tag='h4'
                         {...subtitleProps}
                     >
@@ -74,7 +72,7 @@ const Content: FC<ContentProps> = ({
             {
                 hasText && (
                     <Text
-                        className="mt-6 first:mt-0"
+                        className="mt"
                         {...textProps}
                     >
                         {text}

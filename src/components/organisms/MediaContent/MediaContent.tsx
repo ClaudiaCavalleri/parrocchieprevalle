@@ -10,6 +10,7 @@ import Map from '../../atoms/Map/Map';
 import TextList from '../../cells/TextList/TextList';
 import useFacebookSDK from '../../../hooks/useFacebookSDK';
 import FacebookWidget from '../../atoms/FacebookWidget/FacebookWidget';
+import Tab from '../Tabs/Tabs';
 
 export interface MediaContentProps extends DOMAttributes<HTMLOrSVGElement> {
     alt?: string;
@@ -19,6 +20,7 @@ export interface MediaContentProps extends DOMAttributes<HTMLOrSVGElement> {
     mediaPosition?: 'left' | 'right';
     mediaProps?: ImageProps;
     contentList?: TextRowProps[];
+    tabList?: TextRowProps[];
     type: 'image' | 'map' | 'social' | 'text-only';
 }
 
@@ -28,9 +30,11 @@ const MediaContent: FC<MediaContentProps> = ({
     mediaPosition = 'right',
     mediaProps,
     contentList = [],
+    tabList = [],
     type = 'text-only',
 }) => {
     const hasContentList: boolean = Array.isArray(contentList) && contentList.length > 0;
+    const hasTab: boolean = Array.isArray(tabList) && tabList.length > 0;
     const hasImage = !!mediaProps?.src
     const hasMap = !!mapProps?.src;
     const hasSocial: boolean = type === 'social';
@@ -48,9 +52,16 @@ const MediaContent: FC<MediaContentProps> = ({
                 <Content
                     {...content}
                 />
+                
                 {hasContentList && 
                     <TextList
                         list={contentList}
+                    />
+                }
+
+                {hasTab &&
+                    <Tab
+                        list={tabList}
                     />
                 }
             </div>
