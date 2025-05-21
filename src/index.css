@@ -434,21 +434,60 @@ picture>img {
 }
 
 .swiper {
+    position: relative;
     background-color: var(--primary);
-    heigth: 800px;
 }
 
 .swiper-slide {
-    width: auto;
-    heigth: 300px;
+    width: 300px;
+    heigth: auto;
+    cursor: pointer;
+    border-bottom-right-radius: var(--radius-md);
 }
 
-.slider img {
+.slider-image {
     border-bottom-right-radius: var(--radius-md);
     object-fit: cover;
     overflow: hidden;
-    aspect-ratio: 3/2;
-    width: 400px;
+    aspect-ratio: 4/3;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.lightbox-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -659,6 +698,14 @@ picture>img {
     .grid-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--gap-lg);
+    }
+
+    #slider-gallery {
+        padding-block: var(--margin-lg);
+    }
+
+    .swiper-slide {
+        width: 600px;
     }
 
     footer {

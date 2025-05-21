@@ -35,6 +35,7 @@ export default function App() {
         />
         
         <MediaContentSection 
+            idSection="iscrizione-grest"
             mediaContent={{
                 type: 'image',
                 content: {
@@ -84,6 +85,14 @@ export default function App() {
                     alt: '',
                     src: 'https://picsum.photos/600/400?random',
                 }
+            }}
+        />
+
+        <SliderGallerySection 
+            idSection="slider-gallery"
+            mediaList={slider}
+            content= {{
+                title: 'Le nostre chiese',
             }}
         />
 
@@ -137,11 +146,6 @@ export default function App() {
                     src: 'https://picsum.photos/600/400?random',
                 }
             }}
-        />
-
-        <SliderGallerySection 
-            idSection="slider-gallery"
-            mediaList={slider}
         />
 
         <MediaContentSection 
