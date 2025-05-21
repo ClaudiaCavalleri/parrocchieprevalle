@@ -28,7 +28,7 @@ const CoverSection: FC<CoverSectionProps> = ({
     ].join(' ')
 
     return (
-        <Section className={sectionClassName} bgColor="bg-secondary-light">
+        <Section className={sectionClassName} bgColor="bg-secondary">
             <Container>
                 <div className={`content ${hasImage ? 'text-white' : ''}`}>
 

@@ -147,7 +147,13 @@ hr {
     background-color: var(--primary-dark);
     color: var(--light);
 }
-.bg-secondary-light {
+
+.bg-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.bg-secondary {
     background-color: var(--secondary);
     color: var(--primary-dark);
 }
@@ -418,6 +424,31 @@ picture>img {
 
 .fb-widget-height {
     height: 500;
+}
+
+/* SLIDER GALLERY */
+#slider-gallery {
+    margin-top: var(--margin-none);
+    margin-bottom: var(--margin-none);
+    padding-block: var(--margin-md);
+}
+
+.swiper {
+    background-color: var(--primary);
+    heigth: 800px;
+}
+
+.swiper-slide {
+    width: auto;
+    heigth: 300px;
+}
+
+.slider img {
+    border-bottom-right-radius: var(--radius-md);
+    object-fit: cover;
+    overflow: hidden;
+    aspect-ratio: 3/2;
+    width: 400px;
 }
 
 /* FOOTER */

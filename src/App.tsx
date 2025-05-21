@@ -4,12 +4,14 @@ import CoverSection from "./components/templates/CoverSection/CoverSection";
 import Footer from "./components/templates/Footer/Footer";
 import Header from "./components/templates/Header/Header";
 import MediaContentSection from "./components/templates/MediaContentSection/MediaContentSection";
+import SliderGallerySection from "./components/templates/SliderGallerySection/SliderGallerySection";
 import TabsSection from "./components/templates/TabsSection/TabsSection";
 import { madonnaDelCarrozzone } from "./data/carrozzone";
 import { codiciIban } from "./data/codiciIban";
 import { contatti } from "./data/contatti";
 import { indirizzi } from "./data/indirizzi";
 import { messeData } from "./data/orariMesse";
+import { slider } from "./data/slider";
 import { storieParrocchie } from "./data/storiaParrocchie";
 
 export default function App() {
@@ -136,7 +138,12 @@ export default function App() {
                 }
             }}
         />
-        {/* Slider gallery */}
+
+        <SliderGallerySection 
+            idSection="slider-gallery"
+            mediaList={slider}
+        />
+
         <MediaContentSection 
             mediaContent={{
                 type: 'image',
@@ -159,7 +166,7 @@ export default function App() {
         />
         <CoverSection 
             titleContent={{
-                title: "Bollettino parrochiale La Via",
+                title: "Bollettino parrocchiale La Via",
                 subtitle: `Il nostro notiziario parrocchiale è disponibile sia cartaceo sia digitale.
                     Se desideri abbonarti puoi contattare la segreteria parrocchiale.`,
                 cta: {
