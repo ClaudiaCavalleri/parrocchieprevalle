@@ -10,12 +10,13 @@ export interface ContainerProps extends DOMAttributes<HTMLOrSVGElement> {
 
 const Container: FC<ContainerProps> = ({
     children,
-    className = 'container',
+    className = '',
     containerSize = '',
     grid,
     ...props
 }) => {
     const componentClassName = [
+        'container',
         className,
         grid,
     ];

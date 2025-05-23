@@ -17,6 +17,7 @@ const SliderGallerySection: FC<SliderGallerySectionProps> = ({
     mediaList,
     idSection = '',
 }) => {
+    const hasContent = typeof content === 'object' && content !== null && Object.keys(content).length > 0;
 
     return (
         <Section 
@@ -24,9 +25,12 @@ const SliderGallerySection: FC<SliderGallerySectionProps> = ({
             id={idSection} 
         >
             <Container>
-                <Content
-                    {...content}
-                />
+                {hasContent && 
+                    <Content
+                        {...content}
+                        align="text-center"
+                    />
+                }
                 <SliderGallery mediaList={mediaList} />
             </Container>
         </Section>

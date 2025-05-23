@@ -219,8 +219,76 @@ hr {
     position: relative;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+/* menu {
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:  var(--secondary);
+} */
+
 footer {
     padding-block: var(--margin-sm);
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+
+/* HEADER WRAPPER */ to do : mobile header
+
+/* .header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: var(--margin-text);
+}
+
+header .mt {
+    margin-top: 0px;
+}
+
+header p {
+    margin-bottom: 0px;
+}
+
+header .cta-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    gap: var(--gap-sm);
+    align-items: center;
+}
+
+.icon-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-sm);
+    width: auto;
+    align-items: center;
+}
+
+header picture {
+    height: 60px;
+    width: auto;
+} */
+
+
+/* MENU */
+header menu .cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
 }
 
 .grid-container {
@@ -433,6 +501,10 @@ picture>img {
     padding-block: var(--margin-md);
 }
 
+#slider-gallery .content-wrapper{
+    padding-bottom: var(--margin-md);
+}
+
 .swiper {
     position: relative;
     background-color: var(--primary);
@@ -470,13 +542,17 @@ picture>img {
     max-width: 90vw;
     max-height: 90vh;
     overflow: hidden;
-    border-radius: 8px;
+    border-bottom-right-radius: var(--radius-md);
+    display: flex;
+    align-items: center;     /* Centra verticalmente anche internamente */
+    justify-content: center;
 }
 
 .lightbox-image {
     width: 100%;
     height: auto;
     object-fit: contain;
+    object-position: center;
 }
 
 .lightbox-close {
@@ -485,10 +561,20 @@ picture>img {
     right: 15px;
     font-size: 2rem;
     color: white;
-    background: none;
+    background: rgba(0, 0, 0, 0.25);
     border: none;
+    border-radius: 999px;
+    padding-inline: 9px;
     cursor: pointer;
 }
+
+.swiper-button-next::after {
+    color: var(--secondary-light);
+}
+
+.swiper-button-prev::after {
+    color: var(--secondary-light);
+}   
 
 /* FOOTER */
 .footer-grid {
@@ -568,7 +654,7 @@ picture>img {
     }
 
     .place-second {
-        order: 2;  //da sistemare
+        order: 2;
     }
 
     .content-media-grid .content {
@@ -688,6 +774,46 @@ picture>img {
         padding-inline: 6rem;
     }
 
+    /* HEADER WRAPPER */
+
+    .header-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-block: var(--margin-text);
+    }
+
+    header .mt {
+        margin-top: 0px;
+    }
+
+    header p {
+        margin-bottom: 0px;
+    }
+
+    header .cta-wrapper {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0px;
+        gap: var(--gap-sm);
+        align-items: center;
+    }
+
+    .icon-title-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap-sm);
+        width: auto;
+        align-items: center;
+    }
+
+    header picture {
+        height: 60px;
+        width: auto;
+    }
+
+
+    /* CONTENT MEDIA */
     .content-media-grid .tab-wrapper>tbody {
         grid-column: span 2;
         display: grid;

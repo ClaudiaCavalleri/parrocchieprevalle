@@ -41,12 +41,4 @@ export const slider: ImageProps[] = [
     //     alt: 'Santuario della Madonna del Carrozzone',
     //     src: 'src/assets/img/MadonnaDelCarrozzonePrevalle.jpg',
     // },
-    {
-        alt: 'Ringraziamento',
-        src: 'src/assets/img/prevalleRingraziamento.jpg',
-    },
-    {
-        alt: 'Tributo alla Madonna del Carrozzone',
-        src: 'src/assets/img/tributoMadonnaDelCarrozzone.jpg',
-    }, 
 ];

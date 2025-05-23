@@ -16,7 +16,34 @@ import { storieParrocchie } from "./data/storiaParrocchie";
 
 export default function App() {
     return (<>
-        <Header />
+        <Header 
+            navbar={{
+                title: "Parrocchie di Prevalle",
+                subtitle: "S.Michele arcangelo - S.Zenone",
+                mediaProps: {
+                    alt: 'logo parrocchie di Prevalle',
+                    src: 'src/assets/logo/logoParrocchie.jpg',
+                },
+                ctaList: [
+                    {
+                        label: 'Iscrizioni',
+                        targetId: "iscrizione-grest",
+                    },
+                    {
+                        label: 'Contatti',
+                        targetId: "contatti",
+                    },
+                    {
+                        label: 'S.Messe',
+                        targetId: "orari-messe",
+                    },
+                    {
+                        label: 'Dove siamo',
+                        targetId: "dove-siamo",
+                    },
+                ],
+            }}
+        />
         <CoverSection 
             height="full-height"
             titleContent={{
@@ -93,10 +120,13 @@ export default function App() {
             mediaList={slider}
             content= {{
                 title: 'Le nostre chiese',
+                subtitle: 'lorem ipsum',
+                text: 'lorem ipsum dolor sit amet'
             }}
         />
 
         <MediaContentSection 
+            idSection="orari-messe"
             mediaContent={{
                 type: 'image',
                 content: {
@@ -203,6 +233,7 @@ export default function App() {
         /> */}
 
         <MediaContentSection 
+            idSection="dove-siamo"
             mediaContent={{
                 type: 'map',
                 content: {
