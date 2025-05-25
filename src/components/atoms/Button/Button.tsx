@@ -7,6 +7,7 @@ export interface ButtonProps {
     tag?: 'button' | 'a';
     targetId?: string;
     onClick?: () => void;
+    variant?: 'default' | 'link' | 'primary' | 'secondary';
 }
 
 const Button: FC<ButtonProps> = ({
@@ -16,6 +17,7 @@ const Button: FC<ButtonProps> = ({
     tag: Tag = 'button',
     targetId = '',
     onClick,
+    variant = 'default',
 }) => {
     const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
         event.preventDefault();
@@ -23,23 +25,24 @@ const Button: FC<ButtonProps> = ({
         if (targetId) {
             const element = document.getElementById(targetId);
             if (element) {
-                element.scrollIntoView({ behavior: 'auto' }); // Scroll istantaneo
+                element.scrollIntoView({ behavior: 'auto' });
             }
         }
 
-        // Poi chiudo il menu
         if (typeof onClick === 'function') {
             setTimeout(() => {
                 onClick();
-            }, 50); // leggero delay per assicurarsi che lo scroll avvenga prima
+            }, 50);
         }
     };
+
+    const classes = ['cta', `cta--${variant}`, className].filter(Boolean).join(' ');
 
     if (href) {
         return (
             <a
                 href={href || '#'}
-                className='cta'
+                className={classes}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleClick}
@@ -50,7 +53,7 @@ const Button: FC<ButtonProps> = ({
     }
 
     return (
-        <button className='cta' onClick={handleClick}>
+        <button className={classes} onClick={handleClick}>
             {label}
         </button>
     );

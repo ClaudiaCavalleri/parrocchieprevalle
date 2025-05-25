@@ -85,6 +85,7 @@ const Navbar: FC<NavbarProps> = ({
                             <Button 
                                 key={index}
                                 {...cta} 
+                                variant="link"
                             />
                         ))}
                     </div>

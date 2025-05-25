@@ -39,6 +39,7 @@ const Menu: FC<MenuProps> = ({
                                 key={index} 
                                 {...cta} 
                                 onClick={() => {onClose()}}
+                                variant="link"
                             />
                         ))}
                     </div>

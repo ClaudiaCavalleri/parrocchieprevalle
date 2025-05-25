@@ -239,6 +239,7 @@ export default function App() {
                 cta: {
                     label: 'Contattaci',
                     targetId: 'contatti',
+                    variant: 'primary',
                 },
                 align: "text-center"
             }}
