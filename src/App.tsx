@@ -318,13 +318,20 @@ export default function App() {
                         className: 'policy'
                     }
                 },
-                // {
-                //     subtitle: '',
-                //     text: `Credits: Me`,
-                //     textProps: {
-                //         className: 'policy'
-                //     }
-                // },
+                {
+                    subtitle: '',
+                    text: <span>Immagini: <a href="https://unsplash.com/it">Unsplash</a></span>,
+                    textProps: {
+                        className: 'policy'
+                    }
+                },
+                {
+                    subtitle: '',
+                    text: `Credits: Cavalleri WebDev`,
+                    textProps: {
+                        className: 'policy'
+                    }
+                },
             ]}
             mediaProps={{
                 alt: 'logo parrocchie di Prevalle',

@@ -136,6 +136,11 @@ a {
   color: var(--primary-dark);
 }
 
+a:hover {
+    text-decoration: none;
+    color: var(--secondary) !important;
+}
+
 hr {
     border: 1px solid var(--primary-medium);
     width: 100%;
@@ -568,7 +573,7 @@ picture>img {
 
 .swiper-slide {
     width: 300px;
-    heigth: auto;
+    height: auto;
     cursor: pointer;
     border-bottom-right-radius: var(--radius-md);
 }
