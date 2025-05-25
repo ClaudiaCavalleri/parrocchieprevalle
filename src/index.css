@@ -398,7 +398,6 @@ picture>img {
     object-position: center;
 }
 
-
 /* CONTENT WRAPPER */
 .content-wrapper {
     display: flex;
@@ -445,7 +444,6 @@ picture>img {
 .cover-section .content-wrapper {
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
 }
 
 .cover-section .content {
@@ -482,7 +480,7 @@ picture>img {
     width: 100%;
     height: 100%;
     z-index: 2;  
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0));
     pointer-events: none;
 }
 
@@ -771,6 +769,10 @@ footer img {
 
     .container {
         padding-inline: 3rem;
+    }
+
+    .cover-section .content-wrapper {
+        width: 70%;
     }
 
     .map {

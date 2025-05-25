@@ -5,7 +5,6 @@ import type { ButtonProps } from '../../atoms/Button/Button';
 
 import Title from '../../atoms/Title/Title';
 import Text from '../../atoms/Text/Text';
-import React from 'react';
 import Button  from '../../atoms/Button/Button';
 
 export interface ContentProps extends TitleProps {
@@ -14,7 +13,7 @@ export interface ContentProps extends TitleProps {
     ctaClassName?: string;
     subtitle?: ReactNode;
     subtitleProps?: TitleProps;
-    text?: string|React.ReactNode;
+    text?: string | ReactNode;
     textProps?: TextProps;
     title?: string;
     titleProps?: TitleProps;
@@ -34,7 +33,7 @@ const Content: FC<ContentProps> = ({
 }) => {
     const hasTitle: boolean = typeof title === 'string' && title !== '';
     const hasSubtitle: boolean = typeof subtitle === 'string' && subtitle !== '';
-    const hasText: boolean = typeof text === 'string' && text !== '';
+    const hasText = !!text; 
     const hasCTA: boolean = !!cta;
 
     const wrapperClassName = [
@@ -52,7 +51,7 @@ const Content: FC<ContentProps> = ({
                         tag='h2'
                         {...titleProps}
                     >
-                        {title || titleProps?.title}
+                        {title}
                     </Title>
                 )
             }
@@ -64,7 +63,7 @@ const Content: FC<ContentProps> = ({
                         tag='h4'
                         {...subtitleProps}
                     >
-                        {subtitle || subtitleProps?.title}
+                        {subtitle}
                     </Title>
                 )
             }
@@ -83,7 +82,9 @@ const Content: FC<ContentProps> = ({
             {
                 hasCTA && (
                     <div className={`cta-wrapper ${ctaClassName}`}>
+                        {//@ts-ignore
                         <Button {...cta} />
+                        }
                     </div>
                 )
             }

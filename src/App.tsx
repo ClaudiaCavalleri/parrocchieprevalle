@@ -71,8 +71,8 @@ export default function App() {
             height="full-height"
             titleContent={{
                 title: "Parrocchie di Prevalle",
-                subtitle: "Lorem ipsum dolor sit amet",
-                text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet ',
+                subtitle: "San Michele Arcangelo e San Zenone",
+                text: <p><cite>"La verità è il fondamento della nostra fede, ma non possiamo mai dimenticare la misericordia"</cite><br/>Papa Leone XIV</p>,
                 titleProps: {
                     tag: 'h1'
                 },
@@ -80,7 +80,7 @@ export default function App() {
             }}
             mediaProps={{
                 alt: 'alt',
-                src: 'src/assets/img/banner chiese.jpg',
+                src: 'src/assets/img/prayerwiththecross.avif',
             }}
         />
         
@@ -121,8 +121,8 @@ export default function App() {
                 ],
                 mediaPosition: 'left',
                 mediaProps: {
-                    alt: '',
-                    src: 'https://picsum.photos/600/400?random',
+                    alt: 'Logo Grest 2025 Toc Toc',
+                    src: 'src/assets/img/Logo-TOCTOC-Cre-Grest-2025.png',
                 }
             }}
         />
@@ -140,7 +140,7 @@ export default function App() {
                 mediaPosition: 'right',
                 mediaProps: {
                     alt: '',
-                    src: 'https://picsum.photos/600/400?random',
+                    src: 'src/assets/img/segreteria.avif',
                 }
             }}
         />
@@ -149,9 +149,12 @@ export default function App() {
             idSection="slider-gallery"
             mediaList={slider}
             content= {{
-                title: 'Le nostre chiese',
-                subtitle: 'lorem ipsum',
-                text: 'lorem ipsum dolor sit amet'
+                title: 'Le chiese del nostro territorio',
+                subtitle: 'Un percorso visivo tra architettura e storia',
+                text: `Una raccolta di immagini dedicate alle chiese di Prevalle, 
+                    per esplorare da vicino gli edifici che hanno segnato la vita del paese nel tempo. 
+                    Dalla sobrietà delle cappelle rurali alla maestosità delle parrocchiali, 
+                    ogni scatto racconta un frammento del patrimonio artistico e architettonico locale.`
             }}
         />
 
@@ -167,8 +170,8 @@ export default function App() {
                 tabList: messeData,
                 mediaPosition: 'left',
                 mediaProps: {
-                    alt: '',
-                    src: 'https://picsum.photos/600/400?random',
+                    alt: 'Orari s.messe',
+                    src: 'src/assets/img/messa.avif',
                 }
             }}
         />
@@ -202,8 +205,8 @@ export default function App() {
                 contentList: storieParrocchie,
                 mediaPosition: 'left',
                 mediaProps: {
-                    alt: '',
-                    src: 'https://picsum.photos/600/400?random',
+                    alt: 'Cartolina di foto in bianco e nero di Prevalle',
+                    src: 'src/assets/img/storia.jpg',
                 }
             }}
         />
