@@ -45,18 +45,15 @@ export default function App() {
             }}
             contentList = {[
                 {
-                    subtitle: 'Telefono segreteria parrocchiale',
-                    subtitleProps: {
-                        className: 'font-size: 16px;'
-                    },
-                    text: <a href="tel:+393485876125"><p>+39 348 5876125</p></a>,
+                    subtitle: '',
+                    text: <span>Telefono segreteria parrocchiale: <a href="tel:+393485876125">+39 348 5876125</a></span>,
                     textProps: {
                         className: 'policy'
                     }
                 },
                 {
-                    subtitle: 'Email',
-                    text: <a href="mailto:segreteria@parrocchieprevalle.it"><p>segrteria@segreteriaparrocchiale.it</p></a>,
+                    subtitle: '',
+                    text: <span>Email: <a href="mailto:segreteria@parrocchieprevalle.it">segrteria@segreteriaparrocchiale.it</a></span>,
                     textProps: {
                         className: 'policy'
                     }
@@ -72,6 +69,9 @@ export default function App() {
             titleContent={{
                 title: "Parrocchie di Prevalle",
                 subtitle: "San Michele Arcangelo e San Zenone",
+                subtitleProps: {
+                    tag: 'h2'
+                },
                 text: <p><cite>"La verità è il fondamento della nostra fede, ma non possiamo mai dimenticare la misericordia"</cite><br/>Papa Leone XIV</p>,
                 titleProps: {
                     tag: 'h1'
