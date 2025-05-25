@@ -22,7 +22,7 @@ export default function App() {
                 subtitle: "S.Michele arcangelo - S.Zenone",
                 mediaProps: {
                     alt: 'logo parrocchie di Prevalle',
-                    src: 'src/assets/logo/logoParrocchie.jpg',
+                    src: 'src/assets/logo/logoParrocchie1.png',
                 },
                 ctaList: [
                     {
@@ -67,26 +67,33 @@ export default function App() {
                 type: 'image',
                 content: {
                     title: 'Iscrizioni Grest',
-                    subtitle: 'Le iscrizioni sono aperte dal al',
-                    text: `Inquadra il qr code o clicca sul pulsanto qui sotto. 
-                        Verrai reindirizzato al modulo in cui inserire i dati; 
-                        qui troverai tutte le informazioni, amche riguardo il pagamento, 
+                    subtitle: 'Le iscrizioni sono aperte fino al 8 Giugno.',
+                    text: `Clicca sul pulsante qui sotto, verrai reindirizzato al modulo in cui inserire i dati.
+                        Qui troverai tutte le informazioni, anche riguardo il pagamento, 
                         che deve essere effettuato SOLO tramite bonifico. 
                         Dopo aver confermato, se l'iscrizione è andata a buon fine riceverai una email di conferma, 
                         con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.`,
                     cta: {
                         label: "Compila il modulo",
-                        href: ""
+                        href: "https://forms.gle/E5fopP1k3UF5sz2YA"
                     }
                 },
                 contentList: [
                     {
-                        subtitle: 'Grest San Zenone',
-                        text: `Dal ... al... all'oratorio di S.Zenone`,
+                        subtitle: 'Grest San Zenone (1° turno)',
+                        text: `Dal 16 Giugno al 4 Luglio all'oratorio di S.Zenone`,
                     },
                     {
-                        subtitle: 'Grest San Michele',
-                        text: `Dal ... al... all'oratorio di S.Michele`,
+                        subtitle: 'Grest San Michele (2° turno)',
+                        text: `Dal 7 al 25 Luglio all'oratorio di S.Michele`,
+                    },
+                    {
+                        subtitle: 'Incontro il 3 Giugno, ore 20:45',
+                        text: `In occasione dell'incontro del 3 giugno ore 20.45 all'oratorio di San Zenone 
+                            verrà consegnato alle famiglie tutto il materiale riguardante il patto tra 
+                            famiglia e oratorio, autorizzazioni alla privacy; materiale che dovrà essere 
+                            TASSATIVAMENTE riportato il primo giorno di attività. 
+                            Si potranno acquistare anche i buoni pasto.`,
                     },
                 ],
                 mediaPosition: 'left',
@@ -289,9 +296,9 @@ export default function App() {
                     }
                 },
             ]}
-            mediaProps = {{
-                alt: '',
-                src: 'https://picsum.photos/600/400?random',
+            mediaProps={{
+                alt: 'logo parrocchie di Prevalle',
+                src: 'src/assets/logo/logoParrocchie1.png',
             }}
         />
 

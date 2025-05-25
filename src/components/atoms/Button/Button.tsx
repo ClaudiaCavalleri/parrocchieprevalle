@@ -6,6 +6,7 @@ export interface ButtonProps {
     label: string;
     tag?: 'button' | 'a';
     targetId?: string;
+    onClick?: () => void; 
 }
 
 const Button: FC<ButtonProps> = ({
@@ -14,6 +15,7 @@ const Button: FC<ButtonProps> = ({
     label = '',
     tag: Tag = 'button',
     targetId = '',
+    onClick,
 }) => {
     const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
         if (targetId) {

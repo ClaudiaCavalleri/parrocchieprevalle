@@ -7,7 +7,7 @@ import Container from "../../atoms/Container/Container";
 import Button from "../../atoms/Button/Button";
 import Content from "../../molecules/Content/Content";
 import Image from "../../atoms/Image/Image";
-import Icon from "../../atoms/Icon/Icon";
+import HamburgerIcon from "../../atoms/HamburgerIcon/HamburgerIcon";
 
 export interface NavbarProps {
     ctaList?: ButtonProps[];
@@ -17,6 +17,9 @@ export interface NavbarProps {
     subtitleProps?: TitleProps;
     title?: string;
     titleProps?: TitleProps;
+    isActive?: boolean;
+    isMobile?: boolean;
+    onToggle?: () => void;
 }
 
 const Navbar: FC<NavbarProps> = ({
@@ -27,6 +30,9 @@ const Navbar: FC<NavbarProps> = ({
     subtitleProps,
     title = '',
     titleProps,
+    isActive,
+    isMobile,
+    onToggle,
 }) => {
    
     const hasContent: boolean = 
@@ -60,14 +66,32 @@ const Navbar: FC<NavbarProps> = ({
                 )}
             </div>
             
-            {hasCTA && (
-                <div className={`cta-wrapper ${ctaClassName}`}>
-                    {ctaList.map((cta, index) => (
-                        <Button {...cta} />
-                    ))}
-                </div>
+            {isMobile ? (
+                typeof onToggle === 'function' && (
+                    <button onClick={onToggle} aria-label="Toggle menu">
+                        <HamburgerIcon 
+                            isActive={isActive} 
+                            onClick={onToggle}
+                            color="white" 
+                            size={30} 
+                        />
+                    </button>
+                )
+
+            ):(
+                hasCTA && (
+                    <div className={`cta-wrapper ${ctaClassName}`}>
+                        {ctaList.map((cta, index) => (
+                            <Button 
+                                key={index}
+                                {...cta} 
+                            />
+                        ))}
+                    </div>
+                )
             )}
-            <Icon  color="white" size={30}/>
+            
+            
         </Container>
     )
 }
