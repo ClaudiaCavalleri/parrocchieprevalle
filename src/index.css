@@ -653,12 +653,14 @@ picture>img {
     gap: var(--gap-none);
 }
 
+header picture,
 footer picture {
     height: 150px;
     width: auto;
     margin: 0;
 }
 
+header img,
 footer img {
     height: 150px;
     width: auto;
