@@ -290,8 +290,11 @@ export default function App() {
         <Footer 
             content= {{
                 title: 'Parrocchie di S.Michele e S.Zenone in Prevalle',
+                titleProps: {
+                    tag: 'h3'
+                },
                 subtitle: '',
-                text: <a href="tel:+393485876125"><p>Telefono: 348 5876125</p></a>,
+                text: '',
             }}
             contentList = {[
                 // {

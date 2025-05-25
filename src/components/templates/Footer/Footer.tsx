@@ -25,10 +25,12 @@ const Footer: FC<FooterProps> = ({
             <Container>
                 <div className='footer-grid'>
                     <div className="footer-title">
+                        {//@ts-ignore
                         <Image
-                            pictureClassName='media'
-                            {...mediaProps}
+                        pictureClassName='media'
+                        {...mediaProps}
                         />
+                        }
                         <Content
                             {...content}
                         />
