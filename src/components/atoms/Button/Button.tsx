@@ -6,7 +6,7 @@ export interface ButtonProps {
     label: string;
     tag?: 'button' | 'a';
     targetId?: string;
-    onClick?: () => void; 
+    onClick?: () => void;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -18,12 +18,20 @@ const Button: FC<ButtonProps> = ({
     onClick,
 }) => {
     const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+        event.preventDefault();
+
         if (targetId) {
-            event.preventDefault();
             const element = document.getElementById(targetId);
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                element.scrollIntoView({ behavior: 'auto' }); // Scroll istantaneo
             }
+        }
+
+        // Poi chiudo il menu
+        if (typeof onClick === 'function') {
+            setTimeout(() => {
+                onClick();
+            }, 50); // leggero delay per assicurarsi che lo scroll avvenga prima
         }
     };
 

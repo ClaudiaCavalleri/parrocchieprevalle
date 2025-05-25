@@ -44,14 +44,14 @@ const Navbar: FC<NavbarProps> = ({
     return (
         <Container className="header-wrapper">
             <div className="icon-title-wrapper">
-                {hasImage &&
+                {/* {hasImage &&
                     <Image
                         pictureClassName={[
                             'media',
                         ].join(' ')}
                         {...mediaProps}
                     />
-                }
+                } */}
                 {hasContent && (
                     <Content
                         subtitle={subtitle}

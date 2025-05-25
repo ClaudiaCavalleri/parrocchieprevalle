@@ -43,6 +43,29 @@ export default function App() {
                     },
                 ],
             }}
+            contentList = {[
+                {
+                    subtitle: 'Telefono segreteria parrocchiale',
+                    subtitleProps: {
+                        className: 'font-size: 16px;'
+                    },
+                    text: <a href="tel:+393485876125"><p>+39 348 5876125</p></a>,
+                    textProps: {
+                        className: 'policy'
+                    }
+                },
+                {
+                    subtitle: 'Email',
+                    text: <a href="mailto:segreteria@parrocchieprevalle.it"><p>segrteria@segreteriaparrocchiale.it</p></a>,
+                    textProps: {
+                        className: 'policy'
+                    }
+                },
+            ]}
+            mediaProps={{
+                alt: 'logo parrocchie di Prevalle',
+                src: 'src/assets/logo/logoParrocchie1.png',
+            }}
         />
         <CoverSection 
             height="full-height"
