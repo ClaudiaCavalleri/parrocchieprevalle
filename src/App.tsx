@@ -293,20 +293,20 @@ export default function App() {
                 text: <a href="tel:+393485876125"><p>Telefono: 348 5876125</p></a>,
             }}
             contentList = {[
-                {
-                    subtitle: '',
-                    text: `Privacy Policy`,
-                    textProps: {
-                        className: 'policy'
-                    }
-                },
-                {
-                    subtitle: '',
-                    text: `Cookie policy`,
-                    textProps: {
-                        className: 'policy'
-                    }
-                },
+                // {
+                //     subtitle: '',
+                //     text: `Privacy Policy`,
+                //     textProps: {
+                //         className: 'policy'
+                //     }
+                // },
+                // {
+                //     subtitle: '',
+                //     text: `Cookie policy`,
+                //     textProps: {
+                //         className: 'policy'
+                //     }
+                // },
                 {
                     subtitle: '',
                     text: `© Copyright | 2025`,
@@ -314,13 +314,13 @@ export default function App() {
                         className: 'policy'
                     }
                 },
-                {
-                    subtitle: '',
-                    text: `Credits: Me`,
-                    textProps: {
-                        className: 'policy'
-                    }
-                },
+                // {
+                //     subtitle: '',
+                //     text: `Credits: Me`,
+                //     textProps: {
+                //         className: 'policy'
+                //     }
+                // },
             ]}
             mediaProps={{
                 alt: 'logo parrocchie di Prevalle',
