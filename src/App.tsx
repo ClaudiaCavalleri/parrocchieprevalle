@@ -26,6 +26,10 @@ export default function App() {
                 },
                 ctaList: [
                     {
+                        label: 'Home',
+                        targetId: "hero",
+                    },
+                    {
                         label: 'Iscrizioni',
                         targetId: "iscrizione-grest",
                     },
@@ -65,6 +69,7 @@ export default function App() {
             }}
         />
         <CoverSection 
+            idSection="hero"
             height="full-height"
             titleContent={{
                 title: "Parrocchie di Prevalle",

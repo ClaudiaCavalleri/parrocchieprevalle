@@ -10,15 +10,17 @@ import Image from "../../atoms/Image/Image";
 interface CoverSectionProps {
     contentList?: ContentProps[];
     height?: 'full-height' | 'medium-height' | 'auto-height';
-    titleContent?: Omit<ContentProps, 'columns'|'ctaClassName'|'label'>
+    idSection?: string;
     mediaProps?: ImageProps;
+    titleContent?: Omit<ContentProps, 'columns'|'ctaClassName'|'label'>
 }
 
 const CoverSection: FC<CoverSectionProps> = ({
     contentList = [],
     height = 'auto-height',
-    titleContent,
+    idSection = '',
     mediaProps,
+    titleContent,
 }) => {
     const hasImage = !!mediaProps?.src
 
@@ -28,7 +30,7 @@ const CoverSection: FC<CoverSectionProps> = ({
     ].join(' ')
 
     return (
-        <Section className={sectionClassName} bgColor="bg-secondary">
+        <Section className={sectionClassName} id={idSection} bgColor="bg-secondary">
             <Container>
                 <div className={`content ${hasImage ? 'text-white' : ''}`}>
 
