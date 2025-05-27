@@ -19,6 +19,7 @@
     --font-size-xs: 0.50rem;
     --font-size-sm: 0.75rem;
     --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
     --font-size-lg: 1.25rem;
     --font-size-xl: 1.5rem;
     --font-size-2xl: 2rem;
@@ -117,7 +118,7 @@ h6 {
 }
 
 p {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-md);
     margin-bottom: 1em;
 }
 
@@ -316,7 +317,7 @@ header .menu-toggle-button {
 header menu .cta-wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-md);
+    gap: var(--gap-lg);
     align-items: start;
 }
 
@@ -332,6 +333,7 @@ header menu .cta-wrapper {
     padding: 0.5rem 1rem;
     background-color: var(--primary);
     color: var(--white);
+    font-size: var(--font-size-md);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -374,7 +376,6 @@ header menu .cta-wrapper {
     color: var(--light);
     text-decoration: none;
     padding: 0;
-    font-size: 16px;
     font-weight: normal;
     cursor: pointer;
 }

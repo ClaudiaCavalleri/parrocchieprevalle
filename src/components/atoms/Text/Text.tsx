@@ -15,12 +15,12 @@ const Text: FC<TextProps> = ({
     ].join(" ").trim();
 
     return (
-        <div
+        <p
             className={componentClassName}
             {...props}
         >
             {children}
-        </div>
+        </p>
     )
 }
 

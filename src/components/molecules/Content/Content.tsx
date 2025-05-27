@@ -60,7 +60,7 @@ const Content: FC<ContentProps> = ({
                 hasSubtitle && (
                     <Title
                         className="mt"
-                        tag='h4'
+                        tag='h3'
                         {...subtitleProps}
                     >
                         {subtitle}

@@ -37,7 +37,7 @@ const TextRow: FC<TextRowProps> = ({
                 hasSubtitle && (
                     <Title
                         className="mt"
-                        tag='h4'
+                        tag='h3'
                         {...subtitleProps}
                     >
                         {subtitle || subtitleProps?.title}
