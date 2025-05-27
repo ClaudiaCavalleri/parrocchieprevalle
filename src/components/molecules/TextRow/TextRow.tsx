@@ -27,7 +27,7 @@ const TextRow: FC<TextRowProps> = ({
 
     const wrapperClassName = [
         className,
-        'text-row-wrapper',
+        'tab-item',
         align
     ].join(' ')
 

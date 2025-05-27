@@ -275,6 +275,10 @@ footer {
     gap: var(--gap-lg);
 }
 
+.menu-container hr {
+    margin-block: var(--gap-lg)
+}
+
 .header-wrapper {
     display: flex;
     flex-direction: row;
@@ -392,17 +396,23 @@ header menu .cta-wrapper {
     gap: var(--gap-md);
 }
 
-.tabs-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-md);
+.content-media-grid .cta-wrapper {
+    margin-block: var(--gap-lg);
+}
+
+.tab-wrapper {
+    margin-top: var(--gap-md);
 }
 
 .tab-item {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--gap-md);
+    display: flex;
+    flex-direction: column;
     vertical-align: center;
+    margin-top: var(--gap-sm);
+}
+
+.tab-item:first-child {
+    margin-top: var(--gap-none);
 }
 
 .tab-item>div {
@@ -446,7 +456,7 @@ picture>img {
     display: flex;
     flex-direction: column;
     gap: var(--gap-sm);
-    margin-top: var(--gap-sm);
+    margin-top: var(--gap-md);
 }
 
 .text-row-wrapper {
