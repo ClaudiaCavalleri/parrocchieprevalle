@@ -1,5 +1,3 @@
-
-import Map from "./components/atoms/Map/Map";
 import CoverSection from "./components/templates/CoverSection/CoverSection";
 import Footer from "./components/templates/Footer/Footer";
 import Header from "./components/templates/Header/Header";
@@ -13,13 +11,13 @@ import { messeData } from "./data/orariMesse";
 import { slider } from "./data/slider";
 import { storieParrocchie } from "./data/storiaParrocchie";
 
-import logo from "src/assets/logo/logoParrocchie1.png";
-import heroImg from "src/assets/img/prayerwiththecross.jpg";
-import grest from "src/assets/img/Logo-TOCTOC-Cre-Grest-2025.png";
-import segreteria from "src/assets/img/segreteria.jpg";
-import messa from "src/assets/img/messa.jpg";
-import cartolina from "src/assets/img/storia.jpg";
-import madonnaCarrozzone from "src/assets/img/MadonnaDelCarrozzonePrevalle.jpg";
+import logo from "./assets/logo/logoParrocchie1.png";
+import heroImg from "./assets/img/prayerwiththecross.jpg";
+import grest from "./assets/img/Logo-TOCTOC-Cre-Grest-2025.png";
+import segreteria from "./assets/img/segreteria.jpg";
+import messa from "./assets/img/messa.jpg";
+import cartolina from "./assets/img/storia.jpg";
+import madonnaCarrozzone from "./assets/img/MadonnaDelCarrozzonePrevalle.jpg";
 
 export default function App() {
     return (<>

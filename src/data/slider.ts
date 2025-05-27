@@ -1,14 +1,14 @@
 import type { ImageProps } from "../components/atoms/Image/Image";
 
-import facciataSMichele from "src/assets/img/facciata-san-michele.jpg";
-import interniSMichele from "src/assets/img/interni-san-michele.jpg";
-import facciataSZenone from "src/assets/img/facciata-san-zenone.jpg";
-import interniSZenone from "src/assets/img/interni-san-zenone.jpg";
-import facciataSCarlo from "src/assets/img/facciata-san-carlo-celle.jpg";
-import interniSCarlo from "src/assets/img/interni-san-carlo-celle.jpg";
-import facciataCarrozzone from "src/assets/img/facciata-carrozzone.jpg";
-import interniCarrozzone from "src/assets/img/interni-carrozzone.jpg";
-import campanile from "src/assets/img/fiancata-campanile-san-zenone.jpg";
+import facciataSMichele from "../assets/img/facciata-san-michele.jpg";
+import interniSMichele from "../assets/img/interni-san-michele.jpg";
+import facciataSZenone from "../assets/img/facciata-san-zenone.jpg";
+import interniSZenone from "../assets/img/interni-san-zenone.jpg";
+import facciataSCarlo from "../assets/img/facciata-san-carlo-celle.jpg";
+import interniSCarlo from "../assets/img/interni-san-carlo-celle.jpg";
+import facciataCarrozzone from "../assets/img/facciata-carrozzone.jpg";
+import interniCarrozzone from "../assets/img/interni-carrozzone.jpg";
+import campanile from "../assets/img/fiancata-campanile-san-zenone.jpg";
 
 export const slider: ImageProps[] = [
     {
