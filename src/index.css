@@ -144,6 +144,7 @@ a:hover {
 hr {
     border: 1px solid var(--primary-medium);
     width: 100%;
+    margin-block: var(--margin-sm);
 }
 
 /* BACKGROUND AND TEXT COLORS */
@@ -267,11 +268,12 @@ footer {
 
 .menu-container {
     padding-top: 1rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    justify-content: space-between;
+    gap: var(--gap-lg);
 }
-
 
 .header-wrapper {
     display: flex;

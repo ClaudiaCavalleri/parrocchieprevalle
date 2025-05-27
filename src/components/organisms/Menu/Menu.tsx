@@ -44,20 +44,22 @@ const Menu: FC<MenuProps> = ({
                         ))}
                     </div>
                 )}
-                <hr/>
-                {hasImage &&
-                    <Image
-                        pictureClassName={[
-                            'media',
-                        ].join(' ')}
-                        {...mediaProps}
-                    />
-                }
-                {hasContentList && 
-                    <TextList
-                        list={contentList}
-                    />
-                }
+                <div className="bottom-content-menu">
+                    <hr/>
+                    {hasImage &&
+                        <Image
+                            pictureClassName={[
+                                'media',
+                            ].join(' ')}
+                            {...mediaProps}
+                        />
+                    }
+                    {hasContentList && 
+                        <TextList
+                            list={contentList}
+                        />
+                    }
+                </div>
             </Container>
         </menu>
     )
