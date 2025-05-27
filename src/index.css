@@ -348,6 +348,7 @@ header menu .cta-wrapper {
 
 .cta--default:hover {
     background-color: var(--secondary);
+    color: var(--light) !important;
 }
 
 .cta--primary {

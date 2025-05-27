@@ -109,7 +109,7 @@ export default function App() {
                         con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.`,
                     cta: {
                         label: "Compila il modulo",
-                        href: "https://forms.gle/E5fopP1k3UF5sz2YA"
+                        href: "https://forms.gle/E5fopP1k3UF5sz2YA",
                     }
                 },
                 contentList: [
@@ -174,9 +174,9 @@ export default function App() {
             mediaContent={{
                 type: 'image',
                 content: {
-                    title: 'orari messe',
-                    subtitle: 'lorem ipsum dolor sit amet',
-                    text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet ',
+                    title: 'Orari S.Messe',
+                    subtitle: '',
+                    text: '',
                 },
                 tabList: messeData,
                 mediaPosition: 'left',

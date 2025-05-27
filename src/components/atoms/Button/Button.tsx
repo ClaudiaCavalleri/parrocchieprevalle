@@ -20,19 +20,23 @@ const Button: FC<ButtonProps> = ({
     variant = 'default',
 }) => {
     const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
-        event.preventDefault();
-
         if (targetId) {
+            event.preventDefault();
+
             const element = document.getElementById(targetId);
             if (element) {
                 element.scrollIntoView({ behavior: 'auto' });
             }
-        }
 
-        if (typeof onClick === 'function') {
-            setTimeout(() => {
+            if (typeof onClick === 'function') {
+                setTimeout(() => {
+                    onClick();
+                }, 50);
+            }
+        } else {
+            if (typeof onClick === 'function') {
                 onClick();
-            }, 50);
+            }
         }
     };
 
