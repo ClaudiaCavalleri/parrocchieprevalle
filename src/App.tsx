@@ -5,7 +5,6 @@ import Footer from "./components/templates/Footer/Footer";
 import Header from "./components/templates/Header/Header";
 import MediaContentSection from "./components/templates/MediaContentSection/MediaContentSection";
 import SliderGallerySection from "./components/templates/SliderGallerySection/SliderGallerySection";
-import TabsSection from "./components/templates/TabsSection/TabsSection";
 import { madonnaDelCarrozzone } from "./data/carrozzone";
 import { codiciIban } from "./data/codiciIban";
 import { contatti } from "./data/contatti";
@@ -13,6 +12,14 @@ import { indirizzi } from "./data/indirizzi";
 import { messeData } from "./data/orariMesse";
 import { slider } from "./data/slider";
 import { storieParrocchie } from "./data/storiaParrocchie";
+
+import logo from "src/assets/logo/logoParrocchie1.png";
+import heroImg from "src/assets/img/prayerwiththecross.jpg";
+import grest from "src/assets/img/Logo-TOCTOC-Cre-Grest-2025.png";
+import segreteria from "src/assets/img/segreteria.jpg";
+import messa from "src/assets/img/messa.jpg";
+import cartolina from "src/assets/img/storia.jpg";
+import madonnaCarrozzone from "src/assets/img/MadonnaDelCarrozzonePrevalle.jpg";
 
 export default function App() {
     return (<>
@@ -22,7 +29,7 @@ export default function App() {
                 subtitle: "S.Michele arcangelo - S.Zenone",
                 mediaProps: {
                     alt: 'logo parrocchie di Prevalle',
-                    src: 'src/assets/logo/logoParrocchie1.png',
+                    src: logo,
                 },
                 ctaList: [
                     {
@@ -65,9 +72,10 @@ export default function App() {
             ]}
             mediaProps={{
                 alt: 'logo parrocchie di Prevalle',
-                src: 'src/assets/logo/logoParrocchie1.png',
+                src: logo,
             }}
         />
+
         <CoverSection 
             idSection="hero"
             height="full-height"
@@ -84,8 +92,8 @@ export default function App() {
                 align: 'text-left',
             }}
             mediaProps={{
-                alt: 'alt',
-                src: 'src/assets/img/prayerwiththecross.avif',
+                alt: 'Donna che prega davanti a una corce',
+                src: heroImg,
             }}
         />
         
@@ -127,7 +135,7 @@ export default function App() {
                 mediaPosition: 'left',
                 mediaProps: {
                     alt: 'Logo Grest 2025 Toc Toc',
-                    src: 'src/assets/img/Logo-TOCTOC-Cre-Grest-2025.png',
+                    src: grest,
                 }
             }}
         />
@@ -144,8 +152,8 @@ export default function App() {
                 contentList: contatti,
                 mediaPosition: 'right',
                 mediaProps: {
-                    alt: '',
-                    src: 'src/assets/img/segreteria.avif',
+                    alt: 'Libri aperti sul tavolo',
+                    src: segreteria,
                 }
             }}
         />
@@ -176,7 +184,7 @@ export default function App() {
                 mediaPosition: 'left',
                 mediaProps: {
                     alt: 'Orari s.messe',
-                    src: 'src/assets/img/messa.avif',
+                    src: messa,
                 }
             }}
         />
@@ -211,7 +219,7 @@ export default function App() {
                 mediaPosition: 'left',
                 mediaProps: {
                     alt: 'Cartolina di foto in bianco e nero di Prevalle',
-                    src: 'src/assets/img/storia.jpg',
+                    src: cartolina,
                 }
             }}
         />
@@ -232,7 +240,7 @@ export default function App() {
                 mediaPosition: 'right',
                 mediaProps: {
                     alt: 'Santuario della Madonna del Carrozzone',
-                    src: 'src/assets/img/MadonnaDelCarrozzonePrevalle.jpg',
+                    src: madonnaCarrozzone,
                 }
             }}
         />
@@ -250,7 +258,6 @@ export default function App() {
             }}
             mediaProps={{
                 alt: '',
-                // src: '../src/assets/img/la_via.jpg',
                 src: ''
             }}
         />
@@ -340,7 +347,7 @@ export default function App() {
             ]}
             mediaProps={{
                 alt: 'logo parrocchie di Prevalle',
-                src: 'src/assets/logo/logoParrocchie1.png',
+                src: logo,
             }}
         />
 
