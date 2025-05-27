@@ -26,21 +26,40 @@ const Footer: FC<FooterProps> = ({
                 <div className='footer-grid'>
                     <div className="footer-title">
                         {//@ts-ignore
-                        <Image
-                        pictureClassName='media'
-                        {...mediaProps}
-                        />
+                            <Image
+                                pictureClassName='media'
+                                {...mediaProps}
+                            />
                         }
+
                         <Content
                             {...content}
                         />
+                        
+                        {hasContentList && 
+                            <TextList
+                                list={contentList}
+                            />
+                        }
                     </div>
+
                     <hr/>
-                    {hasContentList && 
-                        <TextList
-                            list={contentList}
-                        />
-                    }
+
+                    <div className="privacy-cookies">
+                        <a href="https://www.iubenda.com/privacy-policy/43931040" 
+                            className="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " 
+                            title="Privacy Policy"
+                        >
+                            Privacy Policy
+                        </a>
+                        
+                        <a href="https://www.iubenda.com/privacy-policy/43931040/cookie-policy" 
+                            className="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " 
+                            title="Cookie Policy "
+                        >
+                            Cookie Policy
+                        </a>
+                    </div>
                 </div>
             </Container>
         </footer>

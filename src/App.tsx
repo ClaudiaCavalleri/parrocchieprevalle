@@ -307,23 +307,23 @@ export default function App() {
                 text: '',
             }}
             contentList = {[
+                {
+                    subtitle: '',
+                    text: <span>Parrocchia S.Michele, c.f.96005930175<br/>Parrocchia S.Zenone, c.f.87000690179</span>,
+                    textProps: {
+                        className: 'policy'
+                    }
+                },
                 // {
                 //     subtitle: '',
-                //     text: `Privacy Policy`,
-                //     textProps: {
-                //         className: 'policy'
-                //     }
-                // },
-                // {
-                //     subtitle: '',
-                //     text: `Cookie policy`,
+                //     text: `Parrocchia S.Zenone | c.f.87000690179`,
                 //     textProps: {
                 //         className: 'policy'
                 //     }
                 // },
                 {
                     subtitle: '',
-                    text: `© Copyright | 2025`,
+                    text: `Copyright © 2025`,
                     textProps: {
                         className: 'policy'
                     }
@@ -334,7 +334,7 @@ export default function App() {
                     textProps: {
                         className: 'policy'
                     }
-                },
+                },            
                 {
                     subtitle: '',
                     text: `Credits: Cavalleri WebDev`,
