@@ -397,7 +397,7 @@ header menu .cta-wrapper {
 }
 
 .content-media-grid .cta-wrapper {
-    margin-block: var(--gap-lg);
+    margin-top: var(--gap-lg);
 }
 
 .tab-wrapper {
@@ -456,7 +456,7 @@ picture>img {
     display: flex;
     flex-direction: column;
     gap: var(--gap-sm);
-    margin-top: var(--gap-md);
+    margin-top: var(--gap-lg);
 }
 
 .text-row-wrapper {
@@ -838,6 +838,10 @@ footer img {
         padding-inline: 3rem;
     }
 
+    .text-list-wrapper {
+        margin-top: var(--gap-md);
+    }
+
     .map {
         max-width: 300px;
     }
@@ -846,6 +850,7 @@ footer img {
         padding-top: var(--margin-sm);
         padding-bottom: var(--margin-text)
     }
+
     .footer-grid {
         display: flex;
         flex-direction: column;
