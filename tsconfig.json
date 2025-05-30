@@ -14,11 +14,11 @@
         "skipLibCheck": true,
         "allowJs": true,
         "paths": {
-            "src/*": ["src/*"]
+            "src/*": ["src/*"],
         }
     },
     "noImplicitAny": false,
-    "include": ["src"],
+    "include": ["src", "src/**/*", "src/vite-env.d.ts"],
     "exclude": ["node_modules", "dist"]
 }
   

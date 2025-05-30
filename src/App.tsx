@@ -1,3 +1,9 @@
+import { useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+
+import type { CodiciRaw } from './helpers/codici';
+import type { ContentProps } from "./components/molecules/Content/Content";
+
 import CoverSection from "./components/templates/CoverSection/CoverSection";
 import Footer from "./components/templates/Footer/Footer";
 import Header from "./components/templates/Header/Header";
@@ -19,9 +25,31 @@ import messa from "./assets/img/messa.jpg";
 import cartolina from "./assets/img/storia.jpg";
 import madonnaCarrozzone from "./assets/img/MadonnaDelCarrozzonePrevalle.jpg";
 
+import { mapCodiciRawToContent } from './helpers/codici';
+
+const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_ANON_KEY);
+
 export default function App() {
+
+    const [iban, setIban] = useState<CodiciRaw[]>([]);
+    const [contentList, setContentList] = useState<ContentProps[]>([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const { data, error } = await supabase.from('codici').select().order('id', { ascending: true });;
+            
+            if (error) {
+                console.error(error);
+            } else if (data) {
+                setIban(data);
+                setContentList(mapCodiciRawToContent(data));
+            }
+        }
+        fetchData();
+    }, []);
+
     return (<>
-        <Header 
+        <Header
             navbar={{
                 title: "Parrocchie di Prevalle",
                 subtitle: "S.Michele arcangelo - S.Zenone",
@@ -52,7 +80,7 @@ export default function App() {
                     },
                 ],
             }}
-            contentList = {[
+            contentList={[
                 {
                     subtitle: '',
                     text: <span>Telefono segreteria parrocchiale: <a href="tel:+393485876125">+39 348 5876125</a></span>,
@@ -74,7 +102,7 @@ export default function App() {
             }}
         />
 
-        <CoverSection 
+        <CoverSection
             idSection="hero"
             height="full-height"
             titleContent={{
@@ -83,7 +111,7 @@ export default function App() {
                 subtitleProps: {
                     tag: 'h2'
                 },
-                text: <p><cite>"La verità è il fondamento della nostra fede, ma non possiamo mai dimenticare la misericordia"</cite><br/>Papa Leone XIV</p>,
+                text: <><cite>"La verità è il fondamento della nostra fede, ma non possiamo mai dimenticare la misericordia"</cite><br />Papa Leone XIV</>,
                 titleProps: {
                     tag: 'h1'
                 },
@@ -94,8 +122,8 @@ export default function App() {
                 src: heroImg,
             }}
         />
-        
-        <MediaContentSection 
+
+        <MediaContentSection
             idSection="iscrizione-grest"
             mediaContent={{
                 type: 'image',
@@ -138,7 +166,7 @@ export default function App() {
             }}
         />
 
-        <MediaContentSection 
+        <MediaContentSection
             idSection="contatti"
             mediaContent={{
                 type: 'image',
@@ -156,10 +184,10 @@ export default function App() {
             }}
         />
 
-        <SliderGallerySection 
+        <SliderGallerySection
             idSection="slider-gallery"
             mediaList={slider}
-            content= {{
+            content={{
                 title: 'Le chiese del nostro territorio',
                 subtitle: 'Un percorso visivo tra architettura e storia',
                 text: `Una raccolta di immagini dedicate alle chiese di Prevalle, 
@@ -169,7 +197,7 @@ export default function App() {
             }}
         />
 
-        <MediaContentSection 
+        <MediaContentSection
             idSection="orari-messe"
             mediaContent={{
                 type: 'image',
@@ -187,21 +215,21 @@ export default function App() {
             }}
         />
 
-        <CoverSection 
+        <CoverSection
             titleContent={{
                 title: "Il dono che unisce",
                 subtitle: "Donare è un gesto semplice, ma carico di significato: è condividere ciò che abbiamo per il bene degli altri, è partecipare con gioia alla vita della nostra comunità.",
                 text: "Ogni offerta, piccola o grande, sostiene concretamente le opere parrocchiali e ci aiuta a crescere insieme nella fede e nella solidarietà.",
                 align: 'text-center',
             }}
-            contentList={codiciIban}
+            contentList={contentList}
             mediaProps={{
                 alt: '',
                 src: '',
             }}
         />
 
-        <MediaContentSection 
+        <MediaContentSection
             mediaContent={{
                 type: 'image',
                 content: {
@@ -222,13 +250,13 @@ export default function App() {
             }}
         />
 
-        <MediaContentSection 
+        <MediaContentSection
             mediaContent={{
                 type: 'image',
                 content: {
                     title: 'Santuario della Madonna del Carrozzone',
                     subtitle: 'Un luogo di fede, memoria e gratitudine nel cuore della comunità',
-                     text: `Il Santuario della Madonna del Carrozzone, situato al confine tra Prevalle e Gavardo, 
+                    text: `Il Santuario della Madonna del Carrozzone, situato al confine tra Prevalle e Gavardo, 
                         è un luogo di profonda devozione popolare, la cui origine risale almeno al XIV secolo, 
                         come attestano documenti che menzionano il toponimo "Carazone" o "Carezon".
                         La denominazione "Carrozzone" sembra derivare da un'evoluzione linguistica del termine latino 
@@ -242,7 +270,7 @@ export default function App() {
                 }
             }}
         />
-        <CoverSection 
+        <CoverSection
             titleContent={{
                 title: "Bollettino parrocchiale La Via",
                 subtitle: `Il nostro notiziario parrocchiale è disponibile sia cartaceo sia digitale.
@@ -259,7 +287,7 @@ export default function App() {
                 src: ''
             }}
         />
-        
+
 
         {/* <MediaContentSection 
             mediaContent={{
@@ -276,7 +304,7 @@ export default function App() {
             }}
         /> */}
 
-        <MediaContentSection 
+        <MediaContentSection
             idSection="dove-siamo"
             mediaContent={{
                 type: 'map',
@@ -285,6 +313,8 @@ export default function App() {
                     subtitle: 'Dove il silenzio si fa preghiera, e ogni cuore trova un tempo di pace e racccoglimento.',
                     text: '',
                 },
+
+                //@ts-ignore
                 contentList: indirizzi,
                 mediaPosition: 'right',
                 mediaProps: {
@@ -297,8 +327,8 @@ export default function App() {
             }}
         />
 
-        <Footer 
-            content= {{
+        <Footer
+            content={{
                 title: 'Parrocchie di S.Michele e S.Zenone in Prevalle',
                 titleProps: {
                     tag: 'h3'
@@ -306,10 +336,10 @@ export default function App() {
                 subtitle: '',
                 text: '',
             }}
-            contentList = {[
+            contentList={[
                 {
                     subtitle: '',
-                    text: <span>Parrocchia S.Michele, c.f.96005930175<br/>Parrocchia S.Zenone, c.f.87000690179</span>,
+                    text: <span>Parrocchia S.Michele, c.f.96005930175<br />Parrocchia S.Zenone, c.f.87000690179</span>,
                     textProps: {
                         className: 'policy'
                     }
@@ -334,7 +364,7 @@ export default function App() {
                     textProps: {
                         className: 'policy'
                     }
-                },            
+                },
                 {
                     subtitle: '',
                     text: `Credits: Cavalleri WebDev`,
@@ -349,7 +379,6 @@ export default function App() {
             }}
         />
 
-       </>
+    </>
     );
 }
-  
