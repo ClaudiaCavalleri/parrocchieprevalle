@@ -94,7 +94,7 @@ body {
     background-color: var(--light);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h3-td {
     font-family: var(--font-serif);
     font-weight: var(--font-weight-normal);
     line-height: var(--line-height-heading);
