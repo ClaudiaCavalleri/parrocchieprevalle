@@ -8,8 +8,10 @@ import React from 'react';
 
 export interface TextRowProps extends TitleProps {
     align?: 'text-center' | 'text-left';
+    elTag?: React.ElementType;
     subtitle?: string|React.ReactNode;
     subtitleProps?: TitleProps;
+    tag?: 'tr' | 'div';
     text?: string | React.ReactNode | Array<string | ReactNode>;
     textProps?: TextProps;
 }
@@ -17,8 +19,10 @@ export interface TextRowProps extends TitleProps {
 const TextRow: FC<TextRowProps> = ({
     align = 'text-left',
     className = '',
+    elTag,
     subtitle,
     subtitleProps,
+    tag: Tag = 'div',
     text = '',
     textProps,
 }) => {
@@ -32,12 +36,12 @@ const TextRow: FC<TextRowProps> = ({
     ].join(' ')
 
     return (
-        <div className={wrapperClassName}>
+        <Tag className={wrapperClassName}>
             {
                 hasSubtitle && (
                     <Title
-                        className="mt"
-                        tag='h3'
+                        className="mt h3-td"
+                        tag={Tag === 'tr' ? 'td' : elTag}
                         {...subtitleProps}
                     >
                         {subtitle || subtitleProps?.title}
@@ -52,6 +56,7 @@ const TextRow: FC<TextRowProps> = ({
                             <Text
                                 key={index}
                                 className="mt"
+                                tag={Tag === 'tr' ? 'td' : elTag}
                                 {...textProps}
                             >
                                 {item}
@@ -60,6 +65,7 @@ const TextRow: FC<TextRowProps> = ({
                     ) : (
                         <Text
                             className="mt"
+                            tag={Tag === 'tr' ? 'td' : elTag}
                             {...textProps}
                         >
                             {text}
@@ -68,7 +74,7 @@ const TextRow: FC<TextRowProps> = ({
                 )
             }
 
-        </div>
+        </Tag>
     )
 }
 

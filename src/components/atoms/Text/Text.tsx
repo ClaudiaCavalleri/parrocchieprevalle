@@ -3,11 +3,13 @@ import type { FC, HtmlHTMLAttributes } from "react";
 export interface TextProps extends HtmlHTMLAttributes<HTMLOrSVGElement> {
     children?: React.ReactNode;
     className?: string;
+    tag?: React.ElementType;
 }
 
 const Text: FC<TextProps> = ({
     children,
     className,
+    tag: Tag = 'p',
     ...props
 }) => {
     const componentClassName = [
@@ -15,12 +17,12 @@ const Text: FC<TextProps> = ({
     ].join(" ").trim();
 
     return (
-        <p
+        <Tag
             className={componentClassName}
             {...props}
         >
             {children}
-        </p>
+        </Tag>
     )
 }
 

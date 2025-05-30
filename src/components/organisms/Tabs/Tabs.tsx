@@ -17,6 +17,7 @@ const Tab: FC<TabProps> = ({
                 {list.map((item, index) => (
                     <TextRow 
                         key={index}
+                        tag="tr"
                         subtitle={item.subtitle}
                         text={item.text}
                         subtitleProps={item.subtitleProps}

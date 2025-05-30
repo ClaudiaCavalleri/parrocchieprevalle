@@ -108,7 +108,8 @@ h2 {
   font-size: var(--font-size-2xl);
 }
 
-h3 {
+h3,
+.h3-td {
   font-size: var(--font-size-xl);
 }
 
@@ -118,7 +119,8 @@ h6 {
   font-size: var(--font-size-lg);
 }
 
-p {
+p,
+td {
     font-size: var(--font-size-md);
 }
 
