@@ -22,7 +22,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "generate types": "npx supabase gen types typescript --project-id aqsfvegliwfzpakevclt --schema public > src/types/supabase.ts"
+    "generate-types": "npx supabase gen types typescript --project-id aqsfvegliwfzpakevclt --schema public > src/types/supabase.ts"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,5 @@
 import type { ContentProps } from "src/components/molecules/Content/Content";
 
-// Tipi raw da Supabase
 export interface CodiciRaw {
     id: number;
     nome: string | null;

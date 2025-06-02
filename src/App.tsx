@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import { createClient } from "@supabase/supabase-js";
 
 import type { CodiciRaw } from './helpers/codici';
+import type { MesseRaw } from "./helpers/messe";
 import type { ContentProps } from "./components/molecules/Content/Content";
+import type { TextRowProps } from "./components/molecules/TextRow/TextRow";
+
+import { fetchData } from "./api/fetchData";
 
 import CoverSection from "./components/templates/CoverSection/CoverSection";
 import Footer from "./components/templates/Footer/Footer";
@@ -10,10 +13,9 @@ import Header from "./components/templates/Header/Header";
 import MediaContentSection from "./components/templates/MediaContentSection/MediaContentSection";
 import SliderGallerySection from "./components/templates/SliderGallerySection/SliderGallerySection";
 import { madonnaDelCarrozzone } from "./data/carrozzone";
-import { codiciIban } from "./data/codiciIban";
 import { contatti } from "./data/contatti";
+import { dataFormattata } from "./helpers/messe";
 import { indirizzi } from "./data/indirizzi";
-import { messeData } from "./data/orariMesse";
 import { slider } from "./data/slider";
 import { storieParrocchie } from "./data/storiaParrocchie";
 
@@ -25,27 +27,24 @@ import messa from "./assets/img/messa.jpg";
 import cartolina from "./assets/img/storia.jpg";
 import madonnaCarrozzone from "./assets/img/MadonnaDelCarrozzonePrevalle.jpg";
 
-import { mapCodiciRawToContent } from './helpers/codici';
-
-const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_ANON_KEY);
 
 export default function App() {
 
     const [iban, setIban] = useState<CodiciRaw[]>([]);
     const [contentList, setContentList] = useState<ContentProps[]>([]);
+    const [messe, setMesse] = useState<MesseRaw[]>([]);
+    const [tabData, setTabData] = useState<TextRowProps[]>([]);
 
     useEffect(() => {
-        async function fetchData() {
-            const { data, error } = await supabase.from('codici').select().order('id', { ascending: true });;
-            
-            if (error) {
-                console.error(error);
-            } else if (data) {
-                setIban(data);
-                setContentList(mapCodiciRawToContent(data));
-            }
+        async function loadingData() {
+            const { iban, contentList, messe, tabData } = await fetchData();
+            setIban(iban);
+            setContentList(contentList);
+            setMesse(messe);
+            setTabData(tabData);
         }
-        fetchData();
+
+        loadingData();
     }, []);
 
     return (<>
@@ -203,10 +202,11 @@ export default function App() {
                 type: 'image',
                 content: {
                     title: 'Orari S.Messe',
-                    subtitle: '',
-                    text: '',
+                    subtitle: `Aggiornati al ${dataFormattata}.`,
+                    text: `Le messe festive mantengono gli stessi orari tutto l'anno (salvo eccezioni), mentre le 
+                    messe feriali durante il periodo estivo subiscono variazioni rispetto al resto dell'anno.` ,
                 },
-                tabList: messeData,
+                tabList: tabData,
                 mediaPosition: 'left',
                 mediaProps: {
                     alt: 'Orari s.messe',
