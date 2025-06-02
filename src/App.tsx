@@ -26,6 +26,7 @@ import segreteria from "./assets/img/segreteria.jpg";
 import messa from "./assets/img/messa.jpg";
 import cartolina from "./assets/img/storia.jpg";
 import madonnaCarrozzone from "./assets/img/MadonnaDelCarrozzonePrevalle.jpg";
+import  mappa  from "./assets/img/mappa.png";
 
 
 export default function App() {
@@ -319,11 +320,11 @@ export default function App() {
                 mediaPosition: 'right',
                 mediaProps: {
                     alt: '',
-                    src: '',
+                    src: mappa,
                 },
-                mapProps: {
-                    src: 'https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11176.768641800993!2d10.420367211410184!3d45.546459812638986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sprevalle%20parrocchie!5e0!3m2!1sit!2sit!4v1648989439564!5m2!1sit!2sit'
-                }
+                // mapProps: {
+                //     src: 'https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11176.768641800993!2d10.420367211410184!3d45.546459812638986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sprevalle%20parrocchie!5e0!3m2!1sit!2sit!4v1648989439564!5m2!1sit!2sit'
+                // }
             }}
         />
 
