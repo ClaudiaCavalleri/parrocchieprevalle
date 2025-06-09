@@ -127,18 +127,23 @@ export default function App() {
             idSection="iscrizione-grest"
             mediaContent={{
                 type: 'image',
+                // content: {
+                //     title: 'Iscrizioni Grest',
+                //     subtitle: 'Le iscrizioni sono aperte fino al 8 Giugno.',
+                //     text: `Clicca sul pulsante qui sotto, verrai reindirizzato al modulo in cui inserire i dati.
+                //         Qui troverai tutte le informazioni, anche riguardo il pagamento, 
+                //         che deve essere effettuato SOLO tramite bonifico. 
+                //         Dopo aver confermato, se l'iscrizione è andata a buon fine riceverai una email di conferma, 
+                //         con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.`,
+                //     cta: {
+                //         label: "Compila il modulo",
+                //         href: "https://forms.gle/E5fopP1k3UF5sz2YA",
+                //     }
+                // },
                 content: {
                     title: 'Iscrizioni Grest',
-                    subtitle: 'Le iscrizioni sono aperte fino al 8 Giugno.',
-                    text: `Clicca sul pulsante qui sotto, verrai reindirizzato al modulo in cui inserire i dati.
-                        Qui troverai tutte le informazioni, anche riguardo il pagamento, 
-                        che deve essere effettuato SOLO tramite bonifico. 
-                        Dopo aver confermato, se l'iscrizione è andata a buon fine riceverai una email di conferma, 
-                        con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.`,
-                    cta: {
-                        label: "Compila il modulo",
-                        href: "https://forms.gle/E5fopP1k3UF5sz2YA",
-                    }
+                    subtitle: 'Le iscrizioni sono chiuse.',
+                    text: ``,
                 },
                 contentList: [
                     {
@@ -149,14 +154,14 @@ export default function App() {
                         subtitle: 'Grest San Michele (2° turno)',
                         text: `Dal 7 al 25 Luglio all'oratorio di S.Michele`,
                     },
-                    {
-                        subtitle: 'Incontro il 3 Giugno, ore 20:45',
-                        text: `In occasione dell'incontro del 3 giugno ore 20.45 all'oratorio di San Zenone 
-                            verrà consegnato alle famiglie tutto il materiale riguardante il patto tra 
-                            famiglia e oratorio, autorizzazioni alla privacy; materiale che dovrà essere 
-                            TASSATIVAMENTE riportato il primo giorno di attività. 
-                            Si potranno acquistare anche i buoni pasto.`,
-                    },
+                    // {
+                    //     subtitle: 'Incontro il 3 Giugno, ore 20:45',
+                    //     text: `In occasione dell'incontro del 3 giugno ore 20.45 all'oratorio di San Zenone 
+                    //         verrà consegnato alle famiglie tutto il materiale riguardante il patto tra 
+                    //         famiglia e oratorio, autorizzazioni alla privacy; materiale che dovrà essere 
+                    //         TASSATIVAMENTE riportato il primo giorno di attività. 
+                    //         Si potranno acquistare anche i buoni pasto.`,
+                    // },
                 ],
                 mediaPosition: 'left',
                 mediaProps: {
