@@ -410,12 +410,12 @@ header menu .cta-wrapper {
     display: flex;
     flex-direction: column;
     vertical-align: center;
-    /* margin-top: var(--gap-sm); */
+    margin-top: var(--gap-sm);
 }
 
-/* .tab-item:first-child {
+.tab-item:first-child {
     margin-top: var(--gap-none);
-} */
+}
 
 .tab-item>div {
     text-align: right;
