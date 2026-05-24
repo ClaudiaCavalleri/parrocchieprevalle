@@ -2,6 +2,7 @@ import type { FC, MouseEvent } from 'react';
 
 export interface ButtonProps {
     className?: string;
+    download?: boolean;
     href?: string;
     label: string;
     tag?: 'button' | 'a';
@@ -12,6 +13,7 @@ export interface ButtonProps {
 
 const Button: FC<ButtonProps> = ({
     className,
+    download = false,
     href = '',
     label = '',
     tag: Tag = 'button',
@@ -47,8 +49,9 @@ const Button: FC<ButtonProps> = ({
             <a
                 href={href || '#'}
                 className={classes}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={download ? undefined : "_blank"}
+                rel={download ? undefined : "noopener noreferrer"}
+                download={download}
                 onClick={handleClick}
             >
                 {label}

@@ -21,12 +21,14 @@ import { storieParrocchie } from "./data/storiaParrocchie";
 
 import logo from "./assets/logo/logoParrocchie1.png";
 import heroImg from "./assets/img/prayerwiththecross.jpg";
-import grest from "./assets/img/Logo-TOCTOC-Cre-Grest-2025.png";
+import grest from "./assets/img/bellaFraLogo-300x300.png";
 import segreteria from "./assets/img/segreteria.jpg";
 import messa from "./assets/img/messa.jpg";
 import cartolina from "./assets/img/storia.jpg";
 import madonnaCarrozzone from "./assets/img/MadonnaDelCarrozzonePrevalle.jpg";
-import  mappa  from "./assets/img/mappa.png";
+import mappa  from "./assets/img/mappa.png";
+import moduloBattesimo from "./assets/docs/Autocertificazione-Battesimo.pdf";
+import fonteBattesimale from "./assets/img/fonte-battesimale.jpg";
 
 
 export default function App() {
@@ -123,13 +125,13 @@ export default function App() {
             }}
         />
 
-        {/* <MediaContentSection
+        <MediaContentSection
             idSection="iscrizione-grest"
             mediaContent={{
                 type: 'image',
                 content: {
-                    title: 'Iscrizioni Grest',
-                    subtitle: 'Le iscrizioni sono aperte fino al 8 Giugno.',
+                    title: 'GREST BELLA FRA!',
+                    subtitle: 'Le iscrizioni sono aperte fino al 7 giugno.',
                     text: `Clicca sul pulsante qui sotto, verrai reindirizzato al modulo in cui inserire i dati.
                         Qui troverai tutte le informazioni, anche riguardo il pagamento, 
                         che deve essere effettuato SOLO tramite bonifico. 
@@ -137,21 +139,21 @@ export default function App() {
                         con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.`,
                     cta: {
                         label: "Compila il modulo",
-                        href: "https://forms.gle/E5fopP1k3UF5sz2YA",
+                        href: "https://forms.gle/X4fyptCuYstnqAyM8",
                     }
                 },
                 contentList: [
                     {
                         subtitle: 'Grest San Zenone (1° turno)',
-                        text: `Dal 16 Giugno al 4 Luglio all'oratorio di S.Zenone`,
+                        text: `Dal 15 giugno al 3 luglio all'oratorio di S.Zenone`,
                     },
                     {
                         subtitle: 'Grest San Michele (2° turno)',
-                        text: `Dal 7 al 25 Luglio all'oratorio di S.Michele`,
+                        text: `Dal 6 al 24 luglio all'oratorio di S.Michele`,
                     },
                     {
-                        subtitle: 'Incontro il 3 Giugno, ore 20:45',
-                        text: `In occasione dell'incontro del 3 giugno ore 20.45 all'oratorio di San Zenone 
+                        subtitle: 'Incontro il 5 giugno, ore 20:45',
+                        text: `In occasione dell'incontro del 5 giugno ore 20.45 all'oratorio di San Zenone 
                             verrà consegnato alle famiglie tutto il materiale riguardante il patto tra 
                             famiglia e oratorio, autorizzazioni alla privacy; materiale che dovrà essere 
                             TASSATIVAMENTE riportato il primo giorno di attività. 
@@ -164,7 +166,7 @@ export default function App() {
                     src: grest,
                 }
             }}
-        /> */}
+        />
 
         <MediaContentSection
             idSection="contatti"
@@ -215,6 +217,29 @@ export default function App() {
                 mediaProps: {
                     alt: 'Orari s.messe',
                     src: messa,
+                }
+            }}
+        />
+
+        <MediaContentSection
+            mediaContent={{
+                type: 'image',
+                content: {
+                    title: 'Battesimi',
+                    subtitle: 'Modulo per madrina e padrino',
+                    text: `Per le famiglie che desiderano il sacramento del battesimo per la propria figlia o il proprio figlio mettiamo a disposizione un modulo 
+                        da far compilare al padrino o alla madrina in cui dichiarano di possedere i requisiti per poter assumere questo incarico così importante.
+                        Lo stesso andrà consegnato in segreteria parrocchiale compilato e firmato.`,
+                    cta: {
+                        label: "Scarica il modulo",
+                        href: moduloBattesimo,
+                        download: true,
+                    }
+                },
+                mediaPosition: 'right',
+                mediaProps: {
+                    alt: 'Fponte Battesimale con libro',
+                    src: fonteBattesimale,
                 }
             }}
         />
@@ -371,7 +396,7 @@ export default function App() {
                 },
                 {
                     subtitle: '',
-                    text: `Credits: Cavalleri WebDev`,
+                    text: `Made with 🙏 by Claudia`,
                     textProps: {
                         className: 'policy'
                     }

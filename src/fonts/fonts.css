@@ -1,3 +1,27 @@
+.playfair-display-regular {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playfair-display-bold {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.4px;
+    line-height: 1.15;
+}
+
+.playfair-display-black {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    line-height: 1.20;
+}
+
 .lora-regular {
     font-family: "Lora", serif;
     font-optical-sizing: auto;

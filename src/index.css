@@ -8,6 +8,7 @@
 
 :root {
     /* Font families con fallback */
+    --font-playfair: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
     --font-serif: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
     --font-sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -92,6 +93,11 @@ body {
     line-height: var(--line-height-base);
     color: var(--primary-dark);
     background-color: var(--light);
+}
+
+h1, h2 {
+    font-family: var(--font-playfair);
+    font-weight: var(--font-weight-bold);
 }
 
 h1, h2, h3, h4, h5, h6, .h3-td {
@@ -335,6 +341,7 @@ header menu .cta-wrapper {
 /* CTA */
 
 .cta {
+    display: inline-flex;
     padding: 0.5rem 1rem;
     background-color: var(--primary);
     color: var(--white);
