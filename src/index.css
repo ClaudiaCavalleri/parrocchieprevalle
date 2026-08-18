@@ -15,6 +15,7 @@
     /* Pesi */
     --font-weight-normal: 400;
     --font-weight-bold: 700;
+    --font-weight-black: 800;
 
     /* Dimensioni base */
     --font-size-xs: 0.50rem;
@@ -75,13 +76,13 @@
     --primary-light: #4D8DC1;
     --primary: #3174AB;
     --primary-medium: #005B93;
-    --primary-dark: #00426B;
+    --primary-dark: #00426b;
 
     --secondary-light: #FFECD1;
     --secondary: #E6BC68;
 
     --dark:rgb(14, 14, 14);
-    --light:rgb(244, 248, 252);
+    --light:rgb(255, 255, 255);
     --black: #000000;
     --white: #ffffff;
 }
@@ -97,11 +98,11 @@ body {
 
 h1, h2 {
     font-family: var(--font-playfair);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-black);
 }
 
-h1, h2, h3, h4, h5, h6, .h3-td {
-    font-family: var(--font-serif);
+h3, h4, h5, h6, .h3-td {
+    font-family: var(--font-sans);
     font-weight: var(--font-weight-normal);
     line-height: var(--line-height-heading);
 }
@@ -116,7 +117,7 @@ h2 {
 
 h3,
 .h3-td {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
 }
 
 h4,
@@ -182,6 +183,11 @@ hr {
 
 .border-primary {
     border: var(--border-width-sm) solid var(--primary);
+}
+
+.border-dark {
+    border: var(--border-width-sm) solid var(--primary-dark);
+    box-shadow:  12px 12px 3px 2px rgb(0 66 107 / 30%);
 }
 
 

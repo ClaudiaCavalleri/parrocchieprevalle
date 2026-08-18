@@ -29,6 +29,9 @@ import madonnaCarrozzone from "./assets/img/MadonnaDelCarrozzonePrevalle.jpg";
 import mappa  from "./assets/img/mappa.png";
 import moduloBattesimo from "./assets/docs/Autocertificazione-Battesimo.pdf";
 import fonteBattesimale from "./assets/img/fonte-battesimale.jpg";
+import grestHoriz from "./assets/img/logo grest 2026 horiz.png";
+import conan from "./assets/img/mini-grest-conan.jpg";
+import quadre from "./assets/img/quadre.png"
 
 
 export default function App() {
@@ -130,41 +133,68 @@ export default function App() {
             mediaContent={{
                 type: 'image',
                 content: {
-                    title: 'GREST BELLA FRA!',
-                    subtitle: 'Le iscrizioni sono aperte fino al 7 giugno.',
+                    title: 'MINI GREST 2026!',
+                    subtitle: 'Dal 24  agosto al 4 settembre 2026',
                     text: `Clicca sul pulsante qui sotto, verrai reindirizzato al modulo in cui inserire i dati.
-                        Qui troverai tutte le informazioni, anche riguardo il pagamento, 
-                        che deve essere effettuato SOLO tramite bonifico. 
+                        Il pagamento per l'iscrizione va effettuatounicamente tramite bonifico. 
                         Dopo aver confermato, se l'iscrizione è andata a buon fine riceverai una email di conferma, 
-                        con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.`,
+                        con i dati inseriti, all'indirizzo email indicato in fase di iscrizione.
+                        ATTENZIONE: i pasti non vanno pagati con bonifico all'atto dell'iscrizione, 
+                        ma alla segretria del grest presso l'oratorio durante le giornate di attività.`,
                     cta: {
                         label: "Compila il modulo",
-                        href: "https://forms.gle/X4fyptCuYstnqAyM8",
+                        // href: "https://forms.gle/X4fyptCuYstnqAyM8",
+                        href: "https://forms.gle/SUq7Bw8EvBDX866u6",
                     }
                 },
-                contentList: [
-                    {
-                        subtitle: 'Grest San Zenone (1° turno)',
-                        text: `Dal 15 giugno al 3 luglio all'oratorio di S.Zenone`,
-                    },
-                    {
-                        subtitle: 'Grest San Michele (2° turno)',
-                        text: `Dal 6 al 24 luglio all'oratorio di S.Michele`,
-                    },
-                    {
-                        subtitle: 'Incontro il 5 giugno, ore 20:45',
-                        text: `In occasione dell'incontro del 5 giugno ore 20.45 all'oratorio di San Zenone 
-                            verrà consegnato alle famiglie tutto il materiale riguardante il patto tra 
-                            famiglia e oratorio, autorizzazioni alla privacy; materiale che dovrà essere 
-                            TASSATIVAMENTE riportato il primo giorno di attività. 
-                            Si potranno acquistare anche i buoni pasto.`,
-                    },
-                ],
+                // contentList: [
+                //     {
+                //         subtitle: 'Grest San Zenone (1° turno)',
+                //         text: `Dal 15 giugno al 3 luglio all'oratorio di S.Zenone`,
+                //     },
+                //     {
+                //         subtitle: 'Grest San Michele (2° turno)',
+                //         text: `Dal 6 al 24 luglio all'oratorio di S.Michele`,
+                //     },
+                //     {
+                //         subtitle: 'Incontro il 5 giugno, ore 20:45',
+                //         text: `In occasione dell'incontro del 5 giugno ore 20.45 all'oratorio di San Zenone 
+                //             verrà consegnato alle famiglie tutto il materiale riguardante il patto tra 
+                //             famiglia e oratorio, autorizzazioni alla privacy; materiale che dovrà essere 
+                //             TASSATIVAMENTE riportato il primo giorno di attività. 
+                //             Si potranno acquistare anche i buoni pasto.`,
+                //     },
+                // ],
                 mediaPosition: 'left',
                 mediaProps: {
-                    alt: 'Logo Grest 2025 Toc Toc',
-                    src: grest,
+                    alt: 'Logo Mini Grest 2026',
+                    src: conan,
                 }
+            }}
+        />
+        <CoverSection
+            titleContent={{
+                title: "PALIO DELLE QUADRE",
+                subtitle: "SETTEMBRE 2026",
+                text: ``,
+                align: 'text-center',
+            }}
+            // contentList={
+            //     [
+            //         {
+            //             title: 'Grest San Zenone (1° turno)',
+            //             subtitle: `Dal 15 giugno al 3 luglio all'oratorio di S.Zenone`,
+            //         },
+            //         {
+            //             title: 'Grest San Michele (2° turno)',
+            //             subtitle: `Dal 6 al 24 luglio all'oratorio di S.Michele`,
+            //         }
+            //     ]
+            // }
+            backgroundColor="bg-primary"
+            mediaProps={{
+                alt: 'Palio delle quadre Prevalle',
+                src: quadre,
             }}
         />
 
@@ -239,7 +269,7 @@ export default function App() {
                 mediaPosition: 'right',
                 mediaProps: {
                     alt: 'Fponte Battesimale con libro',
-                    src: fonteBattesimale,
+                    src: fonteBattesimale,    
                 }
             }}
         />

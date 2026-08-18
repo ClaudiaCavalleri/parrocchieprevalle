@@ -10,7 +10,7 @@ const Title: FC<TitleProps> = ({
     className = '',
     children,
     tag: Tag = 'h1',
-    weight = 'font-regular',
+    weight,
     ...props
 }) => {
     const componentClassName = [

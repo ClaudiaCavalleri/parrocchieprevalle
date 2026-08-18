@@ -8,6 +8,7 @@ import Content from "../../molecules/Content/Content";
 import Image from "../../atoms/Image/Image";
 
 interface CoverSectionProps {
+    backgroundColor?: string;
     contentList?: ContentProps[];
     height?: 'full-height' | 'medium-height' | 'auto-height';
     idSection?: string;
@@ -16,6 +17,7 @@ interface CoverSectionProps {
 }
 
 const CoverSection: FC<CoverSectionProps> = ({
+    backgroundColor = "bg-secondary",
     contentList = [],
     height = 'auto-height',
     idSection = '',
@@ -30,7 +32,7 @@ const CoverSection: FC<CoverSectionProps> = ({
     ].join(' ')
 
     return (
-        <Section className={sectionClassName} id={idSection} bgColor="bg-secondary">
+        <Section className={sectionClassName} id={idSection} bgColor={backgroundColor}>
             <Container>
                 <div className={`content ${hasImage ? 'text-white' : ''}`}>
 
@@ -40,7 +42,7 @@ const CoverSection: FC<CoverSectionProps> = ({
                         <div className="grid-container">
                             {contentList.map((item, index) => (
                                 <Content 
-                                    className={`${hasImage ? 'border-white' : 'border-primary'}`}
+                                    className={`${hasImage ? 'border-white' : 'border-dark'}`}
                                     key={index}
                                     title={item.title}
                                     subtitle={item.subtitle}
